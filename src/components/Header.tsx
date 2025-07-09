@@ -45,12 +45,6 @@ export const Header = () => {
                 {item.label}
               </a>
             ))}
-            <Button 
-              className="bg-cor-principal hover:bg-cor-botao-hover text-white shadow-elegant hover:shadow-xl transition-all duration-300 rounded-full px-6 py-2.5 font-medium"
-              onClick={() => window.open('https://wa.me/5562998221110', '_blank')}
-            >
-              Agendar Consulta
-            </Button>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -78,15 +72,6 @@ export const Header = () => {
                   {item.label}
                 </a>
               ))}
-              <Button 
-                className="bg-cor-principal hover:bg-cor-botao-hover text-white self-start px-6 py-3 rounded-full shadow-elegant hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-medium"
-                onClick={() => {
-                  window.open('https://wa.me/5562998221110', '_blank');
-                  setIsMenuOpen(false);
-                }}
-              >
-                Agendar Consulta
-              </Button>
             </div>
           </nav>
         )}

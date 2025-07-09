@@ -42,19 +42,43 @@ export const HeroSection = () => {
                 Saúde Integral e Cuidado Humanizado com a{" "}
                 <span className="text-cor-principal">Dra. Daniela Fiorim</span>
               </h1>
-              <p className="text-xl text-cor-texto max-w-xl animate-hero-description">
-                Fisioterapia Integrativa e Terapias Complementares para seu bem-estar físico, emocional e espiritual.
-              </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 animate-hero-button">
-              <Button 
-                size="lg" 
-                className="btn-elegant text-white px-8 py-4 text-lg font-semibold rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
-                onClick={() => window.open('https://wa.me/5562998221110', '_blank')}
-              >
-                Agende sua consulta pelo WhatsApp
-              </Button>
+              {/* Seta animada para descobrir mais */}
+              <div className="flex flex-col items-center gap-4 mt-8">
+                <div className="text-center">
+                  <p className="text-lg text-cor-texto/80 mb-2 leading-relaxed">
+                    Sua jornada de transformação começa aqui
+                  </p>
+                  <p className="text-sm text-cor-principal font-medium">
+                    Descubra como podemos cuidar de você ↓
+                  </p>
+                </div>
+                
+                <div className="relative group cursor-pointer" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
+                  {/* Círculo de fundo */}
+                  <div className="w-16 h-16 bg-gradient-to-br from-cor-principal to-cor-botao-hover rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-110 animate-float">
+                    {/* Seta para baixo */}
+                    <svg 
+                      className="w-6 h-6 text-white transform group-hover:translate-y-1 transition-transform duration-300" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                    </svg>
+                  </div>
+                  
+                  {/* Ondas de expansão */}
+                  <div className="absolute inset-0 rounded-full border-2 border-cor-principal/30 animate-ping"></div>
+                  <div className="absolute inset-0 rounded-full border-2 border-cor-destaque/20 animate-pulse" style={{animationDelay: '0.5s'}}></div>
+                </div>
+                
+                <p className="text-xs text-cor-texto/60 italic">
+                  Continue explorando
+                </p>
+              </div>
             </div>
           </div>
 
@@ -70,12 +94,12 @@ export const HeroSection = () => {
             </div>
 
             {/* Card rotativo - agora embaixo da foto */}
-            <div className="pt-8 flex justify-center">
-              <div className="relative w-80 h-20 overflow-hidden">
+            <div className="pt-6 flex justify-center">
+              <div className="relative w-64 h-16 overflow-hidden">
                 {cards.map((card, index) => (
                   <div
                     key={index}
-                    className={`absolute inset-0 flex items-center gap-3 transition-all duration-500 transform ${
+                    className={`absolute inset-0 flex items-center gap-2 transition-all duration-500 transform ${
                       index === currentCardIndex 
                         ? 'translate-x-0 opacity-100' 
                         : index < currentCardIndex 
@@ -83,12 +107,12 @@ export const HeroSection = () => {
                           : 'translate-x-full opacity-0'
                     }`}
                   >
-                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg flex-shrink-0">
-                      <card.icon className="h-6 w-6 text-cor-principal" />
+                    <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md flex-shrink-0">
+                      <card.icon className="h-5 w-5 text-cor-principal" />
                     </div>
                     <div>
-                      <p className="font-semibold text-cor-texto">{card.title}</p>
-                      <p className="text-sm text-cor-texto/70">{card.subtitle}</p>
+                      <p className="font-medium text-cor-texto text-sm">{card.title}</p>
+                      <p className="text-xs text-cor-texto/70">{card.subtitle}</p>
                     </div>
                   </div>
                 ))}
@@ -96,11 +120,11 @@ export const HeroSection = () => {
             </div>
 
             {/* Indicadores de progresso - agora embaixo da foto */}
-            <div className="flex justify-center gap-2 pt-4">
+            <div className="flex justify-center gap-1.5 pt-3">
               {cards.map((_, index) => (
                 <div
                   key={index}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
                     index === currentCardIndex ? 'bg-cor-principal' : 'bg-cor-principal/30'
                   }`}
                 />
