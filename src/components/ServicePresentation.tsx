@@ -1,75 +1,147 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Play, CheckCircle } from "lucide-react";
+import { Play, Heart, Leaf, Zap, Droplets, Brain, Shield } from "lucide-react";
 
 export const ServicePresentation = () => {
-  const highlights = [
-    "Microfisioterapia para traumas e disfunções celulares",
-    "Ozonioterapia para oxigenação e desintoxicação",
-    "Acupuntura Quântica para equilíbrio energético",
-    "Terapia Ortobiomolecular com substâncias naturais",
-    "Psych-K para reprogramação biológica",
-    "Terapias Biofísicas para bem-estar integral"
+  const therapies = [
+    {
+      icon: Heart,
+      title: "Microfisioterapia",
+      description: "Para traumas e disfunções celulares",
+      delay: "0s"
+    },
+    {
+      icon: Droplets,
+      title: "Ozonioterapia",
+      description: "Para oxigenação e desintoxicação",
+      delay: "0.2s"
+    },
+    {
+      icon: Zap,
+      title: "Acupuntura Quântica",
+      description: "Para equilíbrio energético",
+      delay: "0.4s"
+    },
+    {
+      icon: Leaf,
+      title: "Terapia Ortobiomolecular",
+      description: "Com substâncias naturais",
+      delay: "0.6s"
+    },
+    {
+      icon: Brain,
+      title: "Psych-K",
+      description: "Para reprogramação biológica",
+      delay: "0.8s"
+    },
+    {
+      icon: Shield,
+      title: "Terapias Biofísicas",
+      description: "Para bem-estar integral",
+      delay: "1s"
+    }
   ];
 
   return (
-    <section id="services" className="py-20 bg-cor-fundo">
+    <section id="services" className="py-20 bg-gradient-to-br from-cor-fundo to-white">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="space-y-8">
-            <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-cor-texto">
-                Nossas{" "}
-                <span className="text-cor-principal">Terapias Integrativas</span>
-              </h2>
-              <p className="text-lg text-cor-texto leading-relaxed">
-                Sou Daniela Nunes Viana Fiorim, fisioterapeuta com mais de 25 anos de experiência.
-                Desde minha formação em Fisioterapia pela Faculdade de Educação Física de Lins-SP, me dedico à saúde integral e ao cuidado personalizado.
-              </p>
-              <p className="text-lg text-cor-texto leading-relaxed">
-                Após um grave acidente na infância, escolhi a fisioterapia para transformar vidas, unindo ciência e terapias integrativas para cuidar do corpo e da mente.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {highlights.map((highlight, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-cor-principal mt-0.5 flex-shrink-0" />
-                  <span className="text-cor-texto">{highlight}</span>
+        
+        {/* Video Section */}
+        <div className="text-center mb-20">
+          <h2 className="text-3xl md:text-4xl font-bold text-cor-texto mb-6">
+            Vamos conhecer nossa{" "}
+            <span className="text-cor-principal">clínica</span>
+          </h2>
+          <p className="text-lg text-cor-texto mb-8 max-w-2xl mx-auto">
+            Descubra nosso espaço acolhedor e nossa abordagem integrativa para sua saúde e bem-estar
+          </p>
+          
+          {/* YouTube Video Embed */}
+          <div className="relative max-w-4xl mx-auto">
+            <div className="relative bg-white rounded-3xl p-8 shadow-2xl">
+              <div className="aspect-video bg-gradient-to-br from-cor-principal/10 to-cor-destaque/10 rounded-2xl flex items-center justify-center">
+                <div className="w-20 h-20 bg-cor-principal rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 cursor-pointer">
+                  <Play className="h-8 w-8 text-white ml-1" />
                 </div>
-              ))}
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg" 
-                className="bg-cor-principal hover:bg-cor-botao-hover text-white px-8 py-4 text-lg font-semibold rounded-full shadow-elegant hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
-                onClick={() => window.open('https://wa.me/5562998221110', '_blank')}
-              >
-                Agende sua consulta
-              </Button>
-            </div>
-          </div>
-
-          <div className="relative">
-            <Card className="bg-white shadow-xl border-0">
-              <CardContent className="p-8">
-                <div className="flex items-center justify-center mb-6">
-                  <div className="w-20 h-20 bg-cor-principal rounded-full flex items-center justify-center">
-                    <Play className="h-8 w-8 text-white ml-1" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-semibold text-cor-texto text-center mb-4">
-                  Conheça mais sobre minha abordagem
+              </div>
+              <div className="mt-6">
+                <h3 className="text-xl font-semibold text-cor-texto mb-2">
+                  Conheça nossa abordagem terapêutica
                 </h3>
-                <p className="text-cor-texto text-center leading-relaxed">
-                  Assista a uma introdução sobre minhas terapias integrativas e como elas podem 
-                  transformar sua saúde e bem-estar de forma holística.
+                <p className="text-cor-texto/70">
+                  Assista ao vídeo e descubra como nossas terapias integrativas podem transformar sua vida
                 </p>
+              </div>
+            </div>
+            
+            {/* Floating decorative elements */}
+            <div className="absolute -top-6 -right-6 w-32 h-32 bg-cor-destaque/20 rounded-full animate-float"></div>
+            <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-cor-principal/20 rounded-full animate-float" style={{animationDelay: '1s'}}></div>
+          </div>
+        </div>
+
+        {/* Therapies Title */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-cor-texto mb-6">
+            Nossas{" "}
+            <span className="text-cor-principal">Terapias Integrativas</span>
+          </h2>
+          <p className="text-lg text-cor-texto max-w-3xl mx-auto">
+            Tratamentos especializados para cuidar de você de forma completa e personalizada
+          </p>
+        </div>
+
+        {/* Floating Therapy Cards */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
+          {therapies.map((therapy, index) => (
+            <Card 
+              key={index} 
+              className="group bg-white/70 backdrop-blur-sm border-0 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 animate-float"
+              style={{
+                animationDelay: therapy.delay,
+                animationDuration: `${3 + index * 0.5}s`
+              }}
+            >
+              <CardContent className="p-6 text-center relative overflow-hidden">
+                {/* Animated background gradient */}
+                <div className="absolute inset-0 bg-gradient-to-br from-cor-principal/5 to-cor-destaque/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                
+                {/* Icon */}
+                <div className="relative w-16 h-16 bg-gradient-to-br from-cor-principal to-cor-botao-hover rounded-full flex items-center justify-center mx-auto mb-4 shadow-md group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-110">
+                  <therapy.icon className="h-8 w-8 text-white" />
+                </div>
+                
+                {/* Content */}
+                <div className="relative z-10">
+                  <h3 className="text-lg font-semibold text-cor-texto mb-3 group-hover:text-cor-principal transition-colors duration-300">
+                    {therapy.title}
+                  </h3>
+                  <p className="text-cor-texto/70 text-sm leading-relaxed">
+                    {therapy.description}
+                  </p>
+                </div>
+                
+                {/* Floating particles effect */}
+                <div className="absolute top-4 right-4 w-2 h-2 bg-cor-principal/30 rounded-full animate-ping"></div>
+                <div className="absolute bottom-4 left-4 w-1 h-1 bg-cor-destaque/40 rounded-full animate-pulse"></div>
               </CardContent>
             </Card>
-          </div>
+          ))}
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center mt-16">
+          <Button 
+            size="lg" 
+            className="btn-elegant text-white px-8 py-4 text-lg font-semibold rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
+            onClick={() => window.open('https://wa.me/5562998221110', '_blank')}
+          >
+            Agende sua consulta pelo WhatsApp
+          </Button>
+          <p className="text-cor-texto/70 mt-4">
+            Transforme sua saúde com nosso cuidado integral e personalizado
+          </p>
         </div>
       </div>
     </section>

@@ -95,6 +95,41 @@ html {
   }
 }
 
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes textReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
@@ -108,8 +143,50 @@ html {
   animation: slideInRight 0.8s ease-out;
 }
 
+.animate-slide-in-left {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.animate-fade-in-scale {
+  animation: fadeInScale 0.8s ease-out;
+}
+
+.animate-text-reveal {
+  animation: textReveal 0.8s ease-out;
+}
+
 .animate-float {
   animation: float 3s ease-in-out infinite;
+}
+
+/* Animações com delays escalonados */
+.animate-hero-title {
+  animation: textReveal 1s ease-out 0.2s both;
+}
+
+.animate-hero-description {
+  animation: slideInLeft 0.8s ease-out 0.5s both;
+}
+
+.animate-hero-button {
+  animation: fadeInScale 0.8s ease-out 0.8s both;
+}
+
+/* Efeito de typing sutil */
+.typing-effect {
+  overflow: hidden;
+  border-right: 2px solid var(--cor-principal);
+  animation: typing 2s steps(40, end) 0.5s both, blink 1s infinite 2.5s;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  0%, 50% { border-color: var(--cor-principal); }
+  51%, 100% { border-color: transparent; }
 }
 
 /* Gradient backgrounds */

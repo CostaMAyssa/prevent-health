@@ -36,18 +36,18 @@ export const HeroSection = () => {
     <section id="hero" className="min-h-screen flex items-center bg-cor-fundo hero-section">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8 animate-fade-in-up">
+          <div className="space-y-8">
             <div className="space-y-6">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-cor-texto leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-cor-texto leading-tight animate-hero-title">
                 Saúde Integral e Cuidado Humanizado com a{" "}
                 <span className="text-cor-principal">Dra. Daniela Fiorim</span>
               </h1>
-              <p className="text-xl text-cor-texto max-w-xl">
+              <p className="text-xl text-cor-texto max-w-xl animate-hero-description">
                 Fisioterapia Integrativa e Terapias Complementares para seu bem-estar físico, emocional e espiritual.
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 animate-hero-button">
               <Button 
                 size="lg" 
                 className="btn-elegant text-white px-8 py-4 text-lg font-semibold rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"

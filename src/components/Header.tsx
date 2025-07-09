@@ -29,7 +29,7 @@ export const Header = () => {
               />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-cor-principal">Dra. Daniela Fiorim</h1>
+              <h1 className="text-xl font-bold text-cor-principal">PREVENT HEALTH</h1>
               <p className="text-xs text-cor-texto">Fisioterapia Integrativa</p>
             </div>
           </div>
