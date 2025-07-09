@@ -4,6 +4,10 @@ import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Phone, Mail } from "lucide-react";
 
 export const LocationMap = () => {
+  const address = "Rua João de Abreu, 116, Ed. Euro Working Concept, Sala 1002-B, Setor Oeste, Goiânia, GO";
+  const encodedAddress = encodeURIComponent(address);
+  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodedAddress}`;
+
   const contactInfo = [
     {
       icon: MapPin,
@@ -72,7 +76,7 @@ export const LocationMap = () => {
                             } else if (item.title === "E-mail") {
                               window.open('mailto:contato@danielafiorim.com.br', '_blank');
                             } else if (item.title === "Endereço") {
-                              window.open('https://maps.google.com/search/Rua+João+de+Abreu+116+Goiânia+GO', '_blank');
+                              window.open(mapsUrl, '_blank');
                             }
                           }}
                         >
@@ -96,12 +100,13 @@ export const LocationMap = () => {
                       <h3 className="text-xl font-semibold mb-2">
                         Consultório em Goiânia
                       </h3>
-                      <p className="text-white/80 mb-4">
-                        Clique para abrir no Google Maps
+                      <p className="text-white/80 mb-4 px-4">
+                        Rua João de Abreu, 116<br />
+                        Setor Oeste - Goiânia/GO
                       </p>
                       <Button 
                         variant="secondary"
-                        onClick={() => window.open('https://maps.google.com/search/Rua+João+de+Abreu+116+Goiânia+GO', '_blank')}
+                        onClick={() => window.open(mapsUrl, '_blank')}
                       >
                         Abrir no Google Maps
                       </Button>
