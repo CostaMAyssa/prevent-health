@@ -7,6 +7,9 @@ export const LocationMap = () => {
   const address = "Rua João de Abreu, 116, Ed. Euro Working Concept, Sala 1002-B, Setor Oeste, Goiânia, GO";
   const encodedAddress = encodeURIComponent(address);
   const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodedAddress}`;
+  
+  // URL para iframe do Google Maps
+  const embedMapUrl = `https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dw0qWMW1-8Cz7c&q=${encodedAddress}`;
 
   const contactInfo = [
     {
@@ -93,19 +96,34 @@ export const LocationMap = () => {
           <div className="relative">
             <Card className="overflow-hidden border-0 shadow-xl">
               <CardContent className="p-0">
-                <div className="relative h-96 bg-gradient-primary">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center text-white">
-                      <MapPin className="h-16 w-16 mx-auto mb-4 opacity-80" />
-                      <h3 className="text-xl font-semibold mb-2">
+                <div className="relative h-96">
+                  {/* Google Maps Embed */}
+                  <iframe
+                    src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.8891234567890!2d-49.2648123!3d-16.6778123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDQwJzQwLjEiUyA0OcKwMTUnNTMuMyJX!5e0!3m2!1spt-BR!2sbr!4v1234567890123!5m2!1spt-BR!2sbr&q=Rua+João+de+Abreu,+116,+Setor+Oeste,+Goiânia,+GO`}
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Localização da Clínica Dra. Daniela Fiorim"
+                  />
+                  
+                  {/* Overlay com informações */}
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                    <div className="text-white">
+                      <h3 className="text-xl font-semibold mb-2 flex items-center gap-2">
+                        <MapPin className="h-5 w-5" />
                         Consultório em Goiânia
                       </h3>
-                      <p className="text-white/80 mb-4 px-4">
+                      <p className="text-white/90 text-sm mb-3">
                         Rua João de Abreu, 116<br />
+                        Ed. Euro Working Concept - Sala 1002-B<br />
                         Setor Oeste - Goiânia/GO
                       </p>
                       <Button 
                         variant="secondary"
+                        size="sm"
                         onClick={() => window.open(mapsUrl, '_blank')}
                       >
                         Abrir no Google Maps
