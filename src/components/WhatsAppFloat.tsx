@@ -5,9 +5,9 @@ import { MessageCircle } from "lucide-react";
 export const WhatsAppFloat = () => {
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent(
-      "Olá! Gostaria de agendar uma consulta na Prevent Health com a Dra. Daniela Fiorim."
+      "Olá! Gostaria de agendar uma consulta com a Dra. Daniela Fiorim para fisioterapia integrativa."
     );
-    window.open(`https://wa.me/5527999999999?text=${message}`, '_blank');
+    window.open(`https://wa.me/5562998221110?text=${message}`, '_blank');
   };
 
   return (

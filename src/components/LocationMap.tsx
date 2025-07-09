@@ -8,7 +8,7 @@ export const LocationMap = () => {
     {
       icon: MapPin,
       title: "Endereço",
-      info: "Rua das Palmeiras, 123 - Praia do Canto, Vitória - ES",
+      info: "Rua João de Abreu, nº 116 – Ed. Euro Working Concept, Sala 1002-B, Setor Oeste – Goiânia-GO",
       action: "Ver no mapa"
     },
     {
@@ -19,14 +19,14 @@ export const LocationMap = () => {
     },
     {
       icon: Phone,
-      title: "Telefone",
-      info: "(27) 99999-9999",
+      title: "Telefones",
+      info: "(62) 3215-2603 | (62) 99822-1110",
       action: "Ligar agora"
     },
     {
       icon: Mail,
       title: "E-mail",
-      info: "contato@preventhealth.com.br",
+      info: "contato@danielafiorim.com.br",
       action: "Enviar e-mail"
     }
   ];
@@ -40,8 +40,8 @@ export const LocationMap = () => {
             <span className="text-primary">Localização</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Encontre-nos facilmente em uma localização privilegiada, 
-            com fácil acesso e estacionamento disponível.
+            Encontre-nos facilmente em Goiânia, com localização privilegiada 
+            e fácil acesso no Setor Oeste.
           </p>
         </div>
 
@@ -67,12 +67,12 @@ export const LocationMap = () => {
                           size="sm"
                           className="border-primary text-primary hover:bg-primary hover:text-white"
                           onClick={() => {
-                            if (item.title === "Telefone") {
-                              window.open('tel:+5527999999999', '_blank');
+                            if (item.title === "Telefones") {
+                              window.open('tel:+5562998221110', '_blank');
                             } else if (item.title === "E-mail") {
-                              window.open('mailto:contato@preventhealth.com.br', '_blank');
+                              window.open('mailto:contato@danielafiorim.com.br', '_blank');
                             } else if (item.title === "Endereço") {
-                              window.open('https://maps.google.com/', '_blank');
+                              window.open('https://maps.google.com/search/Rua+João+de+Abreu+116+Goiânia+GO', '_blank');
                             }
                           }}
                         >
@@ -94,14 +94,14 @@ export const LocationMap = () => {
                     <div className="text-center text-white">
                       <MapPin className="h-16 w-16 mx-auto mb-4 opacity-80" />
                       <h3 className="text-xl font-semibold mb-2">
-                        Mapa da Clínica
+                        Consultório em Goiânia
                       </h3>
                       <p className="text-white/80 mb-4">
                         Clique para abrir no Google Maps
                       </p>
                       <Button 
                         variant="secondary"
-                        onClick={() => window.open('https://maps.google.com/', '_blank')}
+                        onClick={() => window.open('https://maps.google.com/search/Rua+João+de+Abreu+116+Goiânia+GO', '_blank')}
                       >
                         Abrir no Google Maps
                       </Button>

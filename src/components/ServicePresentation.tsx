@@ -5,12 +5,12 @@ import { Play, CheckCircle } from "lucide-react";
 
 export const ServicePresentation = () => {
   const highlights = [
-    "Atenção personalizada e humanizada",
-    "Medicina preventiva baseada em evidências",
-    "Acompanhamento contínuo da sua saúde",
-    "Tratamentos integrativos e naturais",
-    "Foco no bem-estar integral",
-    "Relação médico-paciente próxima"
+    "Microfisioterapia para traumas e disfunções celulares",
+    "Ozonioterapia para oxigenação e desintoxicação",
+    "Acupuntura Quântica para equilíbrio energético",
+    "Terapia Ortobiomolecular com substâncias naturais",
+    "Psych-K para reprogramação biológica",
+    "Terapias Biofísicas para bem-estar integral"
   ];
 
   return (
@@ -20,13 +20,15 @@ export const ServicePresentation = () => {
           <div className="space-y-8">
             <div className="space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                Uma nova forma de{" "}
-                <span className="text-primary">cuidar da sua saúde</span>
+                Nossas{" "}
+                <span className="text-primary">Terapias Integrativas</span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                A Prevent Health representa uma abordagem inovadora em medicina preventiva, 
-                onde cada paciente recebe atenção personalizada e cuidado integral. 
-                Nosso foco está na prevenção de doenças e na promoção do bem-estar contínuo.
+                Sou Daniela Nunes Viana Fiorim, fisioterapeuta com mais de 25 anos de experiência.
+                Desde minha formação em Fisioterapia pela Faculdade de Educação Física de Lins-SP, me dedico à saúde integral e ao cuidado personalizado.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Após um grave acidente na infância, escolhi a fisioterapia para transformar vidas, unindo ciência e terapias integrativas para cuidar do corpo e da mente.
               </p>
             </div>
 
@@ -43,7 +45,7 @@ export const ServicePresentation = () => {
               <Button 
                 size="lg" 
                 className="bg-primary hover:bg-primary/90 text-white"
-                onClick={() => window.open('https://wa.me/5527999999999', '_blank')}
+                onClick={() => window.open('https://wa.me/5562998221110', '_blank')}
               >
                 Agendar Consulta
               </Button>
@@ -52,7 +54,7 @@ export const ServicePresentation = () => {
                 variant="outline" 
                 className="border-primary text-primary hover:bg-primary hover:text-white"
               >
-                Saiba mais sobre nossos pilares
+                Saiba mais sobre nossas terapias
               </Button>
             </div>
           </div>
@@ -63,7 +65,7 @@ export const ServicePresentation = () => {
                 <div className="relative">
                   <img 
                     src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=800&q=80" 
-                    alt="Consulta médica personalizada"
+                    alt="Fisioterapia Integrativa"
                     className="w-full h-80 object-cover"
                   />
                   <div className="absolute inset-0 bg-primary/10 flex items-center justify-center">
@@ -78,11 +80,10 @@ export const ServicePresentation = () => {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-3 text-foreground">
-                    Conheça nossa abordagem
+                    Cada tratamento é personalizado
                   </h3>
                   <p className="text-muted-foreground">
-                    Assista ao vídeo e descubra como a Prevent Health pode 
-                    transformar sua relação com a saúde.
+                    Respeitando suas necessidades e individualidade para alcançar o melhor resultado.
                   </p>
                 </div>
               </CardContent>

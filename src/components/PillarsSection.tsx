@@ -4,28 +4,24 @@ import { Card, CardContent } from "@/components/ui/card";
 export const PillarsSection = () => {
   const pillars = [
     {
-      title: "Prevenção em primeiro lugar",
-      description: "Acreditamos que prevenir é sempre melhor que remediar. Nossa abordagem foca na identificação precoce de riscos e na implementação de estratégias preventivas personalizadas para cada paciente."
+      title: "Visão Integral",
+      description: "Cuidar do corpo, mente e espírito como um todo, promovendo o equilíbrio em todas as dimensões da saúde e bem-estar."
     },
     {
-      title: "Relação próxima com o paciente",
-      description: "Valorizamos o vínculo médico-paciente, dedicando tempo adequado para ouvir, compreender e criar um plano de cuidados que respeite a individualidade e necessidades de cada pessoa."
+      title: "Humanização",
+      description: "Atendimento empático, acolhedor e respeitoso, onde cada paciente é tratado com dignidade e cuidado individualizado."
     },
     {
-      title: "Tratamentos individualizados",
-      description: "Cada paciente é único, por isso desenvolvemos planos de tratamento personalizados que consideram histórico médico, estilo de vida, preferências e objetivos específicos de saúde."
+      title: "Ciência e Espiritualidade",
+      description: "Combinação harmoniosa do conhecimento científico rigoroso com práticas integrativas comprovadas e abordagem espiritual."
     },
     {
-      title: "Atualização científica contínua",
-      description: "Mantemos-nos constantemente atualizados com as mais recentes pesquisas e evidências científicas, garantindo que nossos pacientes recebam os melhores tratamentos disponíveis."
+      title: "Atualização Contínua",
+      description: "Aperfeiçoamento constante através de especializações internacionais e estudos das mais avançadas técnicas terapêuticas."
     },
     {
-      title: "Medicina integrativa",
-      description: "Combinamos o melhor da medicina tradicional com terapias complementares comprovadas, oferecendo uma abordagem holística para o cuidado da saúde e bem-estar."
-    },
-    {
-      title: "Compromisso com a excelência",
-      description: "Nossa dedicação à excelência se reflete em cada aspecto do atendimento, desde a primeira consulta até o acompanhamento contínuo, sempre priorizando a qualidade e humanização do cuidado."
+      title: "Transformação",
+      description: "Promover mudanças significativas na saúde e qualidade de vida dos pacientes através de terapias eficazes e cuidado dedicado."
     }
   ];
 
@@ -34,12 +30,12 @@ export const PillarsSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            Pilares da{" "}
-            <span className="text-primary">Prevent Health</span>
+            Os pilares que orientam{" "}
+            <span className="text-primary">meu trabalho</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Conheça os valores fundamentais que norteiam nossa prática médica 
-            e garantem um cuidado de excelência para nossos pacientes.
+            Conheça os valores fundamentais que norteiam minha prática terapêutica 
+            e garantem um cuidado de excelência para meus pacientes.
           </p>
         </div>
 

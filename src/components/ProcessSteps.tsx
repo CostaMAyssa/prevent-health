@@ -16,31 +16,31 @@ export const ProcessSteps = () => {
       number: "01",
       icon: Calendar,
       title: "Agendamento da consulta",
-      description: "Agende sua consulta de forma rápida e prática pelo WhatsApp ou telefone"
+      description: "Agendamento rápido pelo WhatsApp ou telefone de forma prática e eficiente"
     },
     {
       number: "02",
       icon: Stethoscope,
-      title: "Avaliação inicial",
-      description: "Consulta detalhada para conhecer seu histórico médico e objetivos de saúde"
+      title: "Avaliação inicial detalhada",
+      description: "Análise completa do seu histórico médico e necessidades específicas"
     },
     {
       number: "03",
       icon: FileText,
       title: "Solicitação de exames",
-      description: "Exames personalizados conforme sua necessidade e perfil de saúde"
+      description: "Quando necessário, solicitação de exames para melhor diagnóstico"
     },
     {
       number: "04",
       icon: ClipboardList,
-      title: "Montagem do plano de cuidado",
-      description: "Plano personalizado com estratégias preventivas e terapêuticas"
+      title: "Plano terapêutico personalizado",
+      description: "Desenvolvimento de plano com as técnicas e terapias mais indicadas para você"
     },
     {
       number: "05",
       icon: Heart,
-      title: "Acompanhamento periódico",
-      description: "Monitoramento contínuo com consultas regulares e ajustes necessários"
+      title: "Acompanhamento e reavaliação",
+      description: "Monitoramento periódico para ajustes e evolução do tratamento"
     }
   ];
 
@@ -49,12 +49,12 @@ export const ProcessSteps = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            Etapas do{" "}
-            <span className="text-primary">Nosso Atendimento</span>
+            Como funciona{" "}
+            <span className="text-primary">o atendimento</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Um processo cuidadosamente estruturado para garantir o melhor 
-            cuidado preventivo e personalizado para você.
+            cuidado integrativo e personalizado para você.
           </p>
         </div>
 
@@ -103,7 +103,7 @@ export const ProcessSteps = () => {
             onClick={() => alert('Download do PDF em breve')}
           >
             <Download className="h-5 w-5 mr-2" />
-            Baixar PDF com todas as informações
+            Baixe aqui o PDF completo com detalhes do nosso atendimento
           </Button>
         </div>
       </div>

@@ -12,23 +12,23 @@ export const DoctorProfile = () => {
   const qualifications = [
     {
       icon: GraduationCap,
-      title: "Formação Médica",
-      description: "Graduação em Medicina pela Universidade Federal do Espírito Santo"
+      title: "Formação Acadêmica",
+      description: "Fisioterapia pela Faculdade de Educação Física de Lins-SP (1994)"
     },
     {
       icon: Award,
-      title: "Especialização",
-      description: "Especialista em Medicina Preventiva e Integrativa"
+      title: "Especializações Internacionais",
+      description: "Microfisioterapia, RPG, Podoposturologia, Acupuntura, Terapia Ortobiomolecular"
     },
     {
       icon: Heart,
-      title: "Abordagem Humanizada",
-      description: "Foco no cuidado integral e na relação médico-paciente"
+      title: "Experiência Clínica",
+      description: "25 anos dedicados à saúde integral e cuidado personalizado"
     },
     {
       icon: Stethoscope,
-      title: "Medicina Integrativa",
-      description: "Combinação de medicina tradicional e terapias complementares"
+      title: "Abordagem Holística",
+      description: "Equilibra maternidade e profissão com amor, fé e compromisso"
     }
   ];
 
@@ -51,19 +51,22 @@ export const DoctorProfile = () => {
           <div className="space-y-8">
             <div className="space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                Dra.{" "}
-                <span className="text-primary">Daniela Fiorim</span>
+                Daniela Nunes Viana Fiorim{" "}
+                <span className="text-primary">– Fisioterapeuta</span>
               </h2>
+              <p className="text-sm text-muted-foreground">CREFITO 17563F</p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Médica especialista em Medicina Preventiva e Integrativa, com mais de 15 anos 
-                de experiência no cuidado humanizado e personalizado. Acredita que a verdadeira 
-                medicina vai além do tratamento de doenças, focando na prevenção e no bem-estar 
-                integral do ser humano.
+                Formada em Fisioterapia pela Faculdade de Educação Física de Lins-SP (1994), 
+                com especializações internacionais em Microfisioterapia, RPG, Podoposturologia, 
+                Acupuntura, Terapia Ortobiomolecular, Psych-K e outras.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Sua abordagem combina os melhores recursos da medicina tradicional com 
-                terapias complementares comprovadas, sempre priorizando a relação próxima 
-                com o paciente e o cuidado individualizado.
+                Sua experiência clínica é marcada pela dedicação à saúde integral, superação 
+                pessoal e busca constante por terapias que promovam equilíbrio físico e emocional.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Mãe de dois filhos, Daniela equilibra a maternidade e a profissão com amor, 
+                fé e compromisso, atendendo seus pacientes em seu consultório em Goiânia desde 2012.
               </p>
             </div>
 
@@ -93,7 +96,7 @@ export const DoctorProfile = () => {
               <Button 
                 size="lg" 
                 className="bg-primary hover:bg-primary/90 text-white"
-                onClick={() => window.open('https://wa.me/5527999999999', '_blank')}
+                onClick={() => window.open('https://wa.me/5562998221110', '_blank')}
               >
                 Agendar Consulta
               </Button>

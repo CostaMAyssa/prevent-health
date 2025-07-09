@@ -15,49 +15,34 @@ import {
 export const BenefitsSection = () => {
   const benefits = [
     {
-      icon: Heart,
-      title: "Redução de uso de medicamentos",
-      description: "Abordagem natural e preventiva para diminuir a dependência de medicamentos"
-    },
-    {
-      icon: Clock,
-      title: "Acompanhamento constante",
-      description: "Monitoramento contínuo da sua saúde com consultas regulares"
-    },
-    {
       icon: TrendingUp,
       title: "Melhora da qualidade de vida",
-      description: "Foco no bem-estar integral e prevenção de doenças"
+      description: "Bem-estar físico, emocional e espiritual através de terapias integrativas"
     },
     {
-      icon: Users,
-      title: "Atendimento humanizado",
-      description: "Cuidado personalizado com tempo adequado para cada paciente"
+      icon: Heart,
+      title: "Alívio efetivo de dores",
+      description: "Tratamento de dores crônicas e agudas com técnicas especializadas"
     },
     {
       icon: Shield,
-      title: "Plano de saúde integrativo",
-      description: "Combinação de medicina tradicional e terapias complementares"
-    },
-    {
-      icon: Activity,
-      title: "Resultados baseados em evidência",
-      description: "Tratamentos fundamentados em pesquisas científicas atualizadas"
+      title: "Fortalecimento imunológico",
+      description: "Estimula o sistema imunológico e previne doenças naturalmente"
     },
     {
       icon: Brain,
-      title: "Prevenção especializada",
-      description: "Identificação precoce de riscos e prevenção de doenças"
+      title: "Equilíbrio emocional",
+      description: "Redução do estresse e promoção do bem-estar mental e emocional"
     },
     {
-      icon: Stethoscope,
-      title: "Medicina personalizada",
-      description: "Tratamentos adaptados às necessidades individuais de cada paciente"
+      icon: Activity,
+      title: "Evidências científicas",
+      description: "Tratamentos baseados em pesquisas científicas e abordagem holística"
     },
     {
-      icon: Award,
-      title: "Excelência no atendimento",
-      description: "Padrão de qualidade elevado em todos os aspectos do cuidado"
+      icon: Users,
+      title: "Cuidado personalizado",
+      description: "Atendimento próximo, respeitoso e individualizado para cada paciente"
     }
   ];
 
@@ -66,11 +51,11 @@ export const BenefitsSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            Benefícios do{" "}
-            <span className="text-primary">Programa Prevent Health</span>
+            Benefícios da{" "}
+            <span className="text-primary">Fisioterapia Integrativa</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Descubra as vantagens de escolher uma abordagem preventiva e personalizada 
+            Descubra as vantagens de escolher uma abordagem integrativa e personalizada 
             para cuidar da sua saúde com excelência e humanização.
           </p>
         </div>

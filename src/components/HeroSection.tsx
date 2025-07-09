@@ -10,12 +10,11 @@ export const HeroSection = () => {
           <div className="space-y-8 animate-fade-in-up">
             <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-                Cuide da sua saúde com quem{" "}
-                <span className="text-primary">entende de prevenção</span>
+                Saúde Integral e Cuidado Humanizado com a{" "}
+                <span className="text-primary">Dra. Daniela Fiorim</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-xl">
-                Medicina preventiva personalizada com acompanhamento contínuo para 
-                sua saúde e bem-estar integral.
+                Fisioterapia Integrativa e Terapias Complementares para seu bem-estar físico, emocional e espiritual.
               </p>
             </div>
 
@@ -23,16 +22,16 @@ export const HeroSection = () => {
               <Button 
                 size="lg" 
                 className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg"
-                onClick={() => window.open('https://wa.me/5527999999999', '_blank')}
+                onClick={() => window.open('https://wa.me/5562998221110', '_blank')}
               >
-                Agendar pelo WhatsApp
+                Agende sua consulta pelo WhatsApp
               </Button>
               <Button 
                 size="lg" 
                 variant="outline" 
                 className="border-primary text-primary hover:bg-primary hover:text-white px-8 py-6 text-lg"
               >
-                Conheça nossos serviços
+                Conheça nossas terapias
               </Button>
             </div>
 
@@ -51,8 +50,8 @@ export const HeroSection = () => {
                   <Shield className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <p className="font-semibold">Medicina Preventiva</p>
-                  <p className="text-sm text-muted-foreground">Prevenção em primeiro lugar</p>
+                  <p className="font-semibold">Fisioterapia Integrativa</p>
+                  <p className="text-sm text-muted-foreground">25 anos de experiência</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
@@ -60,8 +59,8 @@ export const HeroSection = () => {
                   <Users className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <p className="font-semibold">Acompanhamento Contínuo</p>
-                  <p className="text-sm text-muted-foreground">Sempre perto de você</p>
+                  <p className="font-semibold">Terapias Complementares</p>
+                  <p className="text-sm text-muted-foreground">Corpo, mente e espírito</p>
                 </div>
               </div>
             </div>

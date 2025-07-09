@@ -6,24 +6,24 @@ export const Footer = () => {
   const socialLinks = [
     {
       icon: Instagram,
-      href: "https://instagram.com/preventhealth",
+      href: "https://instagram.com/dradanielafiorim",
       label: "Instagram"
     },
     {
       icon: Facebook,
-      href: "https://facebook.com/preventhealth",
+      href: "https://facebook.com/dradanielafiorim",
       label: "Facebook"
     },
     {
       icon: Linkedin,
-      href: "https://linkedin.com/company/preventhealth",
+      href: "https://linkedin.com/in/danielafiorim",
       label: "LinkedIn"
     }
   ];
 
   const quickLinks = [
     { label: "Início", href: "#hero" },
-    { label: "Serviços", href: "#services" },
+    { label: "Terapias", href: "#services" },
     { label: "Benefícios", href: "#benefits" },
     { label: "Sobre", href: "#about" },
     { label: "Localização", href: "#location" }
@@ -37,16 +37,15 @@ export const Footer = () => {
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
               <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">PH</span>
+                <span className="text-white font-bold text-lg">DF</span>
               </div>
               <div>
-                <h3 className="text-xl font-bold">Prevent Health</h3>
-                <p className="text-sm text-gray-400">Dra. Daniela Fiorim</p>
+                <h3 className="text-xl font-bold">Dra. Daniela Fiorim</h3>
+                <p className="text-sm text-gray-400">Fisioterapia Integrativa</p>
               </div>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
-              Medicina preventiva personalizada com acompanhamento contínuo 
-              para sua saúde e bem-estar integral.
+              Fisioterapia Integrativa e Terapias Complementares para seu bem-estar físico, emocional e espiritual.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
@@ -84,13 +83,13 @@ export const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-6">Contato</h4>
             <div className="space-y-3 text-gray-300">
-              <p>Rua das Palmeiras, 123<br />Praia do Canto, Vitória - ES</p>
-              <p>(27) 99999-9999</p>
-              <p>contato@preventhealth.com.br</p>
+              <p>Rua João de Abreu, nº 116<br />Ed. Euro Working Concept<br />Sala 1002-B, Setor Oeste<br />Goiânia-GO</p>
+              <p>(62) 3215-2603<br />(62) 99822-1110</p>
+              <p>contato@danielafiorim.com.br</p>
             </div>
             <Button 
               className="mt-6 bg-primary hover:bg-primary/90"
-              onClick={() => window.open('https://wa.me/5527999999999', '_blank')}
+              onClick={() => window.open('https://wa.me/5562998221110', '_blank')}
             >
               Agendar Consulta
             </Button>
@@ -99,7 +98,7 @@ export const Footer = () => {
 
         <div className="border-t border-gray-700 mt-12 pt-8 text-center">
           <p className="text-gray-400 flex items-center justify-center gap-2">
-            © 2024 Prevent Health. Todos os direitos reservados.
+            © 2024 Dra. Daniela Fiorim. Todos os direitos reservados.
             <Heart className="h-4 w-4 text-primary" />
             Desenvolvido com carinho para sua saúde.
           </p>

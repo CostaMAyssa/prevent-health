@@ -8,7 +8,7 @@ export const Header = () => {
 
   const menuItems = [
     { label: "Início", href: "#hero" },
-    { label: "Serviços", href: "#services" },
+    { label: "Terapias", href: "#services" },
     { label: "Benefícios", href: "#benefits" },
     { label: "Pilares", href: "#pillars" },
     { label: "Atendimento", href: "#process" },
@@ -22,11 +22,11 @@ export const Header = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-lg">PH</span>
+              <span className="text-white font-bold text-lg">DF</span>
             </div>
             <div>
-              <h1 className="text-xl font-bold text-primary">Prevent Health</h1>
-              <p className="text-xs text-muted-foreground">Dra. Daniela Fiorim</p>
+              <h1 className="text-xl font-bold text-primary">Dra. Daniela Fiorim</h1>
+              <p className="text-xs text-muted-foreground">Fisioterapia Integrativa</p>
             </div>
           </div>
 
@@ -43,7 +43,7 @@ export const Header = () => {
             ))}
             <Button 
               className="bg-primary hover:bg-primary/90 text-white"
-              onClick={() => window.open('https://wa.me/5527999999999', '_blank')}
+              onClick={() => window.open('https://wa.me/5562998221110', '_blank')}
             >
               Agendar Consulta
             </Button>
@@ -77,7 +77,7 @@ export const Header = () => {
               <Button 
                 className="bg-primary hover:bg-primary/90 text-white self-start"
                 onClick={() => {
-                  window.open('https://wa.me/5527999999999', '_blank');
+                  window.open('https://wa.me/5562998221110', '_blank');
                   setIsMenuOpen(false);
                 }}
               >
