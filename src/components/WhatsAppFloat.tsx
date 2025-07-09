@@ -12,12 +12,12 @@ export const WhatsAppFloat = () => {
 
   return (
     <Button 
-      className="whatsapp-float"
+      className="fixed bottom-6 right-6 z-50 bg-cor-principal hover:bg-cor-botao-hover text-white rounded-full w-16 h-16 shadow-elegant hover:shadow-3xl transition-all duration-300 transform hover:scale-110 hover:-translate-y-2 animate-pulse"
       onClick={handleWhatsAppClick}
       size="icon"
       aria-label="Conversar no WhatsApp"
     >
-      <MessageCircle className="h-6 w-6" />
+      <MessageCircle className="h-7 w-7" />
     </Button>
   );
 };

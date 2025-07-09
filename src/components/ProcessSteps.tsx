@@ -45,14 +45,14 @@ export const ProcessSteps = () => {
   ];
 
   return (
-    <section id="process" className="py-20 gradient-secondary">
+    <section id="process" className="py-20 bg-cor-fundo">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-cor-texto mb-6">
             Como funciona{" "}
-            <span className="text-primary">o atendimento</span>
+            <span className="text-cor-principal">o atendimento</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg text-cor-texto max-w-3xl mx-auto">
             Um processo cuidadosamente estruturado para garantir o melhor 
             cuidado integrativo e personalizado para você.
           </p>
@@ -60,7 +60,7 @@ export const ProcessSteps = () => {
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-primary/20"></div>
+          <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-cor-principal/20"></div>
           
           <div className="space-y-12">
             {steps.map((step, index) => (
@@ -69,14 +69,14 @@ export const ProcessSteps = () => {
                   <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm">
                     <CardContent className="p-6">
                       <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
-                          <step.icon className="h-6 w-6 text-primary" />
+                        <div className="w-12 h-12 bg-cor-principal/10 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-cor-principal/20 transition-colors">
+                          <step.icon className="h-6 w-6 text-cor-principal" />
                         </div>
                         <div>
-                          <h3 className="text-xl font-semibold text-foreground mb-3">
+                          <h3 className="text-xl font-semibold text-cor-texto mb-3">
                             {step.title}
                           </h3>
-                          <p className="text-muted-foreground leading-relaxed">
+                          <p className="text-cor-texto/70 leading-relaxed">
                             {step.description}
                           </p>
                         </div>
@@ -86,7 +86,7 @@ export const ProcessSteps = () => {
                 </div>
 
                 {/* Step number */}
-                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg z-10">
+                <div className="w-16 h-16 bg-cor-principal rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg z-10">
                   {step.number}
                 </div>
 
@@ -99,7 +99,7 @@ export const ProcessSteps = () => {
         <div className="text-center mt-16">
           <Button 
             size="lg" 
-            className="bg-primary hover:bg-primary/90 text-white"
+            className="bg-cor-principal hover:bg-cor-botao-hover text-white px-8 py-4 text-lg font-semibold rounded-full shadow-elegant hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             onClick={() => alert('Download do PDF em breve')}
           >
             <Download className="h-5 w-5 mr-2" />

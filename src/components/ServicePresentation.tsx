@@ -14,29 +14,29 @@ export const ServicePresentation = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-background">
+    <section id="services" className="py-20 bg-cor-fundo">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
             <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+              <h2 className="text-3xl md:text-4xl font-bold text-cor-texto">
                 Nossas{" "}
-                <span className="text-primary">Terapias Integrativas</span>
+                <span className="text-cor-principal">Terapias Integrativas</span>
               </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg text-cor-texto leading-relaxed">
                 Sou Daniela Nunes Viana Fiorim, fisioterapeuta com mais de 25 anos de experiência.
                 Desde minha formação em Fisioterapia pela Faculdade de Educação Física de Lins-SP, me dedico à saúde integral e ao cuidado personalizado.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg text-cor-texto leading-relaxed">
                 Após um grave acidente na infância, escolhi a fisioterapia para transformar vidas, unindo ciência e terapias integrativas para cuidar do corpo e da mente.
               </p>
             </div>
 
-            <div className="space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {highlights.map((highlight, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                  <span className="text-foreground">{highlight}</span>
+                <div key={index} className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-cor-principal mt-0.5 flex-shrink-0" />
+                  <span className="text-cor-texto">{highlight}</span>
                 </div>
               ))}
             </div>
@@ -44,48 +44,29 @@ export const ServicePresentation = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 size="lg" 
-                className="bg-primary hover:bg-primary/90 text-white"
+                className="bg-cor-principal hover:bg-cor-botao-hover text-white px-8 py-4 text-lg font-semibold rounded-full shadow-elegant hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
                 onClick={() => window.open('https://wa.me/5562998221110', '_blank')}
               >
-                Agendar Consulta
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-primary text-primary hover:bg-primary hover:text-white"
-              >
-                Saiba mais sobre nossas terapias
+                Agende sua consulta
               </Button>
             </div>
           </div>
 
           <div className="relative">
-            <Card className="overflow-hidden bg-gradient-secondary border-0 shadow-xl">
-              <CardContent className="p-0">
-                <div className="relative">
-                  <img 
-                    src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=800&q=80" 
-                    alt="Fisioterapia Integrativa"
-                    className="w-full h-80 object-cover"
-                  />
-                  <div className="absolute inset-0 bg-primary/10 flex items-center justify-center">
-                    <Button 
-                      size="lg" 
-                      className="bg-white/90 hover:bg-white text-primary rounded-full p-6"
-                      onClick={() => alert('Vídeo institucional em breve')}
-                    >
-                      <Play className="h-8 w-8 ml-2" />
-                    </Button>
+            <Card className="bg-white shadow-xl border-0">
+              <CardContent className="p-8">
+                <div className="flex items-center justify-center mb-6">
+                  <div className="w-20 h-20 bg-cor-principal rounded-full flex items-center justify-center">
+                    <Play className="h-8 w-8 text-white ml-1" />
                   </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-3 text-foreground">
-                    Cada tratamento é personalizado
-                  </h3>
-                  <p className="text-muted-foreground">
-                    Respeitando suas necessidades e individualidade para alcançar o melhor resultado.
-                  </p>
-                </div>
+                <h3 className="text-xl font-semibold text-cor-texto text-center mb-4">
+                  Conheça mais sobre minha abordagem
+                </h3>
+                <p className="text-cor-texto text-center leading-relaxed">
+                  Assista a uma introdução sobre minhas terapias integrativas e como elas podem 
+                  transformar sua saúde e bem-estar de forma holística.
+                </p>
               </CardContent>
             </Card>
           </div>

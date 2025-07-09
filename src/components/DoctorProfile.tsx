@@ -33,38 +33,38 @@ export const DoctorProfile = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-background">
+    <section id="about" className="py-20 bg-cor-fundo">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
-            <div className="relative bg-gradient-primary rounded-3xl p-8 shadow-2xl">
+            <div className="relative bg-white rounded-3xl p-8 shadow-2xl">
               <img 
                 src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=80" 
                 alt="Dra. Daniela Fiorim"
                 className="w-full h-96 object-cover rounded-2xl"
               />
-              <div className="absolute -top-6 -right-6 w-24 h-24 bg-white/20 rounded-full animate-float"></div>
-              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-primary/20 rounded-full animate-float" style={{animationDelay: '1.5s'}}></div>
+              <div className="absolute -top-6 -right-6 w-24 h-24 bg-cor-destaque/20 rounded-full animate-float"></div>
+              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-cor-principal/20 rounded-full animate-float" style={{animationDelay: '1.5s'}}></div>
             </div>
           </div>
 
           <div className="space-y-8">
             <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+              <h2 className="text-3xl md:text-4xl font-bold text-cor-texto">
                 Daniela Nunes Viana Fiorim{" "}
-                <span className="text-primary">– Fisioterapeuta</span>
+                <span className="text-cor-principal">– Fisioterapeuta</span>
               </h2>
-              <p className="text-sm text-muted-foreground">CREFITO 17563F</p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-sm text-cor-texto">CREFITO 17563F</p>
+              <p className="text-lg text-cor-texto leading-relaxed">
                 Formada em Fisioterapia pela Faculdade de Educação Física de Lins-SP (1994), 
                 com especializações internacionais em Microfisioterapia, RPG, Podoposturologia, 
                 Acupuntura, Terapia Ortobiomolecular, Psych-K e outras.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg text-cor-texto leading-relaxed">
                 Sua experiência clínica é marcada pela dedicação à saúde integral, superação 
                 pessoal e busca constante por terapias que promovam equilíbrio físico e emocional.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg text-cor-texto leading-relaxed">
                 Mãe de dois filhos, Daniela equilibra a maternidade e a profissão com amor, 
                 fé e compromisso, atendendo seus pacientes em seu consultório em Goiânia desde 2012.
               </p>
@@ -72,17 +72,17 @@ export const DoctorProfile = () => {
 
             <div className="grid sm:grid-cols-2 gap-6">
               {qualifications.map((qualification, index) => (
-                <Card key={index} className="group hover:shadow-lg transition-all duration-300 border border-border/50 hover:border-primary/30">
+                <Card key={index} className="group hover:shadow-lg transition-all duration-300 border border-cor-destaque/20 hover:border-cor-principal/30">
                   <CardContent className="p-4">
                     <div className="flex items-start gap-3">
-                      <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
-                        <qualification.icon className="h-5 w-5 text-primary" />
+                      <div className="w-10 h-10 bg-cor-principal/10 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-cor-principal/20 transition-colors">
+                        <qualification.icon className="h-5 w-5 text-cor-principal" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-foreground mb-1">
+                        <h3 className="font-semibold text-cor-texto mb-1">
                           {qualification.title}
                         </h3>
-                        <p className="text-sm text-muted-foreground">
+                        <p className="text-sm text-cor-texto/70">
                           {qualification.description}
                         </p>
                       </div>
@@ -95,17 +95,10 @@ export const DoctorProfile = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 size="lg" 
-                className="bg-primary hover:bg-primary/90 text-white"
+                className="bg-cor-principal hover:bg-cor-botao-hover text-white px-8 py-4 text-lg font-semibold rounded-full shadow-elegant hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                 onClick={() => window.open('https://wa.me/5562998221110', '_blank')}
               >
                 Agendar Consulta
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-primary text-primary hover:bg-primary hover:text-white"
-              >
-                Conhecer mais sobre a abordagem
               </Button>
             </div>
           </div>

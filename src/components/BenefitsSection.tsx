@@ -47,14 +47,14 @@ export const BenefitsSection = () => {
   ];
 
   return (
-    <section id="benefits" className="py-20 gradient-secondary">
+    <section id="benefits" className="py-20 bg-cor-fundo">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-cor-texto mb-6">
             Benefícios da{" "}
-            <span className="text-primary">Fisioterapia Integrativa</span>
+            <span className="text-cor-principal">Fisioterapia Integrativa</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg text-cor-texto max-w-3xl mx-auto">
             Descubra as vantagens de escolher uma abordagem integrativa e personalizada 
             para cuidar da sua saúde com excelência e humanização.
           </p>
@@ -67,13 +67,13 @@ export const BenefitsSection = () => {
               className="group hover:shadow-xl transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm"
             >
               <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-                  <benefit.icon className="h-8 w-8 text-primary" />
+                <div className="w-16 h-16 bg-cor-principal/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-cor-principal/20 transition-colors">
+                  <benefit.icon className="h-8 w-8 text-cor-principal" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-foreground">
+                <h3 className="text-xl font-semibold mb-3 text-cor-texto">
                   {benefit.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-cor-texto/70 leading-relaxed">
                   {benefit.description}
                 </p>
               </CardContent>

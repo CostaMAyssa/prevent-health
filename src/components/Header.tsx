@@ -17,16 +17,20 @@ export const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-cor-fundo/95 backdrop-blur-md">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-lg">DF</span>
+            <div className="w-10 h-10 rounded-full flex items-center justify-center overflow-hidden">
+              <img 
+                src="/favicon.png" 
+                alt="Logo Dra. Daniela Fiorim" 
+                className="w-full h-full object-cover"
+              />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-primary">Dra. Daniela Fiorim</h1>
-              <p className="text-xs text-muted-foreground">Fisioterapia Integrativa</p>
+              <h1 className="text-xl font-bold text-cor-principal">Dra. Daniela Fiorim</h1>
+              <p className="text-xs text-cor-texto">Fisioterapia Integrativa</p>
             </div>
           </div>
 
@@ -36,13 +40,13 @@ export const Header = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+                className="text-sm font-medium text-cor-texto hover:text-cor-principal transition-colors"
               >
                 {item.label}
               </a>
             ))}
             <Button 
-              className="bg-primary hover:bg-primary/90 text-white"
+              className="bg-cor-principal hover:bg-cor-botao-hover text-white shadow-elegant hover:shadow-xl transition-all duration-300 rounded-full px-6 py-2.5 font-medium"
               onClick={() => window.open('https://wa.me/5562998221110', '_blank')}
             >
               Agendar Consulta
@@ -53,7 +57,7 @@ export const Header = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="md:hidden text-cor-texto"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -62,20 +66,20 @@ export const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 border-t border-border">
+          <nav className="md:hidden mt-4 pb-4">
             <div className="flex flex-col space-y-4 mt-4">
               {menuItems.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+                  className="text-sm font-medium text-cor-texto hover:text-cor-principal transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
                 </a>
               ))}
               <Button 
-                className="bg-primary hover:bg-primary/90 text-white self-start"
+                className="bg-cor-principal hover:bg-cor-botao-hover text-white self-start px-6 py-3 rounded-full shadow-elegant hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-medium"
                 onClick={() => {
                   window.open('https://wa.me/5562998221110', '_blank');
                   setIsMenuOpen(false);

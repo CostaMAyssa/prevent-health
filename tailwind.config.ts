@@ -61,7 +61,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom colors
+				'cor-fundo': 'var(--cor-fundo)',
+				'cor-principal': 'var(--cor-principal)',
+				'cor-destaque': 'var(--cor-destaque)',
+				'cor-texto': 'var(--cor-texto)',
+				'cor-botao-hover': 'var(--cor-botao-hover)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

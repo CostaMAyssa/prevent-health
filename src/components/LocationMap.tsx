@@ -39,14 +39,14 @@ export const LocationMap = () => {
   ];
 
   return (
-    <section id="location" className="py-20 gradient-secondary">
+    <section id="location" className="py-20 bg-cor-fundo">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-cor-texto mb-6">
             Nossa{" "}
-            <span className="text-primary">Localização</span>
+            <span className="text-cor-principal">Localização</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg text-cor-texto max-w-3xl mx-auto">
             Encontre-nos facilmente em Goiânia, com localização privilegiada 
             e fácil acesso no Setor Oeste.
           </p>
@@ -58,21 +58,21 @@ export const LocationMap = () => {
               <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
-                      <item.icon className="h-6 w-6 text-primary" />
+                    <div className="w-12 h-12 bg-cor-principal/10 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-cor-principal/20 transition-colors">
+                      <item.icon className="h-6 w-6 text-cor-principal" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-lg font-semibold text-foreground mb-2">
+                      <h3 className="text-lg font-semibold text-cor-texto mb-2">
                         {item.title}
                       </h3>
-                      <p className="text-muted-foreground mb-3">
+                      <p className="text-cor-texto/70 mb-3">
                         {item.info}
                       </p>
                       {item.action && (
                         <Button 
                           variant="outline" 
                           size="sm"
-                          className="border-primary text-primary hover:bg-primary hover:text-white"
+                          className="border-cor-principal text-cor-principal hover:bg-cor-principal hover:text-white rounded-full px-4 py-2 shadow-elegant hover:shadow-lg transition-all duration-300 transform hover:scale-105"
                           onClick={() => {
                             if (item.title === "Telefones") {
                               window.open('tel:+5562998221110', '_blank');
@@ -124,6 +124,7 @@ export const LocationMap = () => {
                       <Button 
                         variant="secondary"
                         size="sm"
+                        className="bg-white/90 hover:bg-white text-cor-principal hover:text-cor-botao-hover rounded-full px-4 py-2 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-medium"
                         onClick={() => window.open(mapsUrl, '_blank')}
                       >
                         Abrir no Google Maps

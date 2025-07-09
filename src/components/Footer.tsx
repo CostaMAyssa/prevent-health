@@ -30,14 +30,18 @@ export const Footer = () => {
   ];
 
   return (
-    <footer className="bg-foreground text-white">
+    <footer className="bg-cor-texto text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo and Description */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">DF</span>
+              <div className="w-10 h-10 rounded-full flex items-center justify-center overflow-hidden">
+                <img 
+                  src="/favicon.png" 
+                  alt="Logo Dra. Daniela Fiorim" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
                 <h3 className="text-xl font-bold">Dra. Daniela Fiorim</h3>
@@ -53,7 +57,7 @@ export const Footer = () => {
                   key={index}
                   variant="outline" 
                   size="icon"
-                  className="border-gray-600 text-gray-400 hover:bg-primary hover:border-primary hover:text-white"
+                  className="border-gray-600 text-gray-400 hover:bg-cor-principal hover:border-cor-principal hover:text-white rounded-full transition-all duration-300 transform hover:scale-110 shadow-md hover:shadow-lg"
                   onClick={() => window.open(social.href, '_blank')}
                 >
                   <social.icon className="h-5 w-5" />
@@ -70,7 +74,7 @@ export const Footer = () => {
                 <li key={index}>
                   <a 
                     href={link.href}
-                    className="text-gray-300 hover:text-primary transition-colors"
+                    className="text-gray-300 hover:text-cor-principal transition-colors"
                   >
                     {link.label}
                   </a>
@@ -88,7 +92,7 @@ export const Footer = () => {
               <p>contato@danielafiorim.com.br</p>
             </div>
             <Button 
-              className="mt-6 bg-primary hover:bg-primary/90"
+              className="mt-6 bg-cor-principal hover:bg-cor-botao-hover text-white px-6 py-3 rounded-full shadow-elegant hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-medium"
               onClick={() => window.open('https://wa.me/5562998221110', '_blank')}
             >
               Agendar Consulta
@@ -99,7 +103,7 @@ export const Footer = () => {
         <div className="border-t border-gray-700 mt-12 pt-8 text-center">
           <p className="text-gray-400 flex items-center justify-center gap-2">
             © 2024 Dra. Daniela Fiorim. Todos os direitos reservados.
-            <Heart className="h-4 w-4 text-primary" />
+            <Heart className="h-4 w-4 text-cor-principal" />
             Desenvolvido com carinho para sua saúde.
           </p>
         </div>

@@ -26,14 +26,14 @@ export const PillarsSection = () => {
   ];
 
   return (
-    <section id="pillars" className="py-20 bg-background">
+    <section id="pillars" className="py-20 bg-cor-fundo">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-cor-texto mb-6">
             Os pilares que orientam{" "}
-            <span className="text-primary">meu trabalho</span>
+            <span className="text-cor-principal">meu trabalho</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg text-cor-texto max-w-3xl mx-auto">
             Conheça os valores fundamentais que norteiam minha prática terapêutica 
             e garantem um cuidado de excelência para meus pacientes.
           </p>
@@ -43,14 +43,14 @@ export const PillarsSection = () => {
           {pillars.map((pillar, index) => (
             <Card 
               key={index} 
-              className="group hover:shadow-xl transition-all duration-300 border border-border/50 hover:border-primary/30"
+              className="group hover:shadow-xl transition-all duration-300 border border-cor-destaque/20 hover:border-cor-principal/30"
             >
               <CardContent className="p-6">
                 <div className="mb-4">
-                  <h3 className="text-xl font-semibold text-foreground mb-4 group-hover:text-primary transition-colors">
+                  <h3 className="text-xl font-semibold text-cor-texto mb-4 group-hover:text-cor-principal transition-colors">
                     {pillar.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-cor-texto/70 leading-relaxed">
                     {pillar.description}
                   </p>
                 </div>

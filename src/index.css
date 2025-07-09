@@ -25,6 +25,13 @@
     --input: 0 0% 90%;
     --ring: 0 0% 9%;
     --radius: 0.5rem;
+    
+    /* Custom colors */
+    --cor-fundo: #FAF6EC;
+    --cor-principal: #38867E;
+    --cor-destaque: #D1B078;
+    --cor-texto: #2B2B2B;
+    --cor-botao-hover: #2f6d68;
   }
 
   .dark {
@@ -55,7 +62,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-cor-fundo text-cor-texto;
     font-family: 'Poppins', sans-serif;
   }
 }
@@ -153,4 +160,111 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #495057;
+}
+
+/* Custom color utilities */
+@layer utilities {
+  .bg-cor-fundo {
+    background-color: var(--cor-fundo);
+  }
+  
+  .bg-cor-principal {
+    background-color: var(--cor-principal);
+  }
+  
+  .bg-cor-destaque {
+    background-color: var(--cor-destaque);
+  }
+  
+  .bg-cor-botao-hover {
+    background-color: var(--cor-botao-hover);
+  }
+  
+  .text-cor-principal {
+    color: var(--cor-principal);
+  }
+  
+  .text-cor-destaque {
+    color: var(--cor-destaque);
+  }
+  
+  .text-cor-texto {
+    color: var(--cor-texto);
+  }
+  
+  .border-cor-principal {
+    border-color: var(--cor-principal);
+  }
+  
+  .border-cor-destaque {
+    border-color: var(--cor-destaque);
+  }
+  
+  .hover-bg-cor-botao-hover:hover {
+    background-color: var(--cor-botao-hover);
+  }
+}
+
+/* Espaçamento para conteúdo após header fixo */
+.main-content {
+  padding-top: calc(80px + 1rem); /* Altura do header + pequena margem */
+}
+
+.hero-section {
+  padding-top: 80px; /* Altura exata do header fixo */
+}
+
+/* Estilos elegantes para botões */
+.btn-elegant {
+  background: linear-gradient(135deg, var(--cor-principal) 0%, var(--cor-botao-hover) 100%);
+  border: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-elegant::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-elegant:hover::before {
+  left: 100%;
+}
+
+.btn-elegant:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(56, 134, 126, 0.4);
+}
+
+.btn-elegant:active {
+  transform: translateY(0);
+}
+
+/* Animação suave para sombras */
+.shadow-elegant {
+  box-shadow: 0 4px 15px rgba(56, 134, 126, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.shadow-elegant:hover {
+  box-shadow: 0 8px 25px rgba(56, 134, 126, 0.3);
+}
+
+/* Efeito glassmorphism para botões */
+.btn-glass {
+  background: rgba(56, 134, 126, 0.9);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-glass:hover {
+  background: rgba(47, 109, 104, 0.9);
+  backdrop-filter: blur(15px);
 }
