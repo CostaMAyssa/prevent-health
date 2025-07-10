@@ -303,17 +303,9 @@ html {
   padding-top: calc(80px + 1rem); /* Altura do header + pequena margem */
 }
 
+/* Hero section sem padding para navbar transparente */
 .hero-section {
-  padding-top: 80px; /* Altura exata do header fixo */
-}
-
-/* Garantir que a navbar fixa sempre funcione */
-header {
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  z-index: 9999 !important;
+  padding-top: 0; /* Navbar transparente no topo */
 }
 
 /* Estilos elegantes para botões */
