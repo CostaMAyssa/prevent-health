@@ -1,10 +1,12 @@
 
 import { Button } from "@/components/ui/button";
 import { Heart, Shield, Users } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export const HeroSection = () => {
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   const cards = [
     {
@@ -24,6 +26,14 @@ export const HeroSection = () => {
     }
   ];
 
+  // Lista dos vídeos locais
+  const videos = [
+    "/videos/8313516-hd_1920_1080_30fps.mp4",
+    "/videos/5793441-uhd_3840_2160_25fps.mp4", 
+    "/videos/4520173-hd_1920_1080_30fps.mp4"
+  ];
+
+  // Alternância dos cards rotativos
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentCardIndex((prevIndex) => (prevIndex + 1) % cards.length);
@@ -32,13 +42,76 @@ export const HeroSection = () => {
     return () => clearInterval(interval);
   }, [cards.length]);
 
+  // Alternância dos vídeos
+  useEffect(() => {
+    const videoInterval = setInterval(() => {
+      setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % videos.length);
+    }, 15000); // Troca a cada 15 segundos
+
+    return () => clearInterval(videoInterval);
+  }, [videos.length]);
+
+  // Controlar a transição dos vídeos
+  useEffect(() => {
+    if (videoRef.current) {
+      const video = videoRef.current;
+      video.style.opacity = '0';
+      
+      const handleLoadedData = () => {
+        video.style.transition = 'opacity 1s ease-in-out';
+        video.style.opacity = '1';
+      };
+
+      video.addEventListener('loadeddata', handleLoadedData);
+      video.load(); // Recarrega o vídeo
+
+      return () => {
+        video.removeEventListener('loadeddata', handleLoadedData);
+      };
+    }
+  }, [currentVideoIndex]);
+
   return (
-    <section id="hero" className="min-h-screen flex items-center bg-cor-fundo hero-section">
-      <div className="container mx-auto px-4">
+    <section id="hero" className="relative min-h-screen flex items-center hero-section overflow-hidden">
+      {/* Playlist de Vídeos de Fundo */}
+      <video 
+        ref={videoRef}
+        autoPlay 
+        loop 
+        muted 
+        playsInline
+        poster="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1920&q=80"
+        className="absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-1000"
+        key={currentVideoIndex} // Force re-render quando muda o vídeo
+      >
+        <source src={videos[currentVideoIndex]} type="video/mp4" />
+        {/* Fallback para navegadores que não suportam vídeo */}
+        Seu navegador não suporta a tag de vídeo.
+      </video>
+
+      {/* Indicadores de Vídeo */}
+      <div className="absolute top-4 right-4 z-20 flex gap-2">
+        {videos.map((_, index) => (
+          <div
+            key={index}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              index === currentVideoIndex ? 'bg-cor-principal' : 'bg-white/50'
+            }`}
+            onClick={() => setCurrentVideoIndex(index)}
+            style={{ cursor: 'pointer' }}
+          />
+        ))}
+      </div>
+
+      {/* Overlay escuro para melhor legibilidade */}
+      <div className="absolute inset-0 bg-black/40 z-10"></div>
+
+      {/* Conteúdo da Hero Section */}
+      <div className="container mx-auto px-4 relative z-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <div className="space-y-6">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-cor-texto leading-tight animate-hero-title">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight animate-hero-title drop-shadow-lg">
                 Saúde Integral e Cuidado Humanizado com a{" "}
                 <span className="text-cor-principal">Dra. Daniela Fiorim</span>
               </h1>
@@ -48,10 +121,10 @@ export const HeroSection = () => {
               {/* Seta animada para descobrir mais */}
               <div className="flex flex-col items-center gap-4 mt-8">
                 <div className="text-center">
-                  <p className="text-lg text-cor-texto/80 mb-2 leading-relaxed">
+                  <p className="text-lg text-white/90 mb-2 leading-relaxed drop-shadow-md">
                     Sua jornada de transformação começa aqui
                   </p>
-                  <p className="text-sm text-cor-principal font-medium">
+                  <p className="text-sm text-cor-principal font-medium drop-shadow-md">
                     Descubra como podemos cuidar de você ↓
                   </p>
                 </div>
@@ -68,14 +141,14 @@ export const HeroSection = () => {
                     >
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                     </svg>
-                  </div>
+                </div>
                   
                   {/* Ondas de expansão */}
                   <div className="absolute inset-0 rounded-full border-2 border-cor-principal/30 animate-ping"></div>
                   <div className="absolute inset-0 rounded-full border-2 border-cor-destaque/20 animate-pulse" style={{animationDelay: '0.5s'}}></div>
                 </div>
                 
-                <p className="text-xs text-cor-texto/60 italic">
+                <p className="text-xs text-white/70 italic drop-shadow-md">
                   Continue explorando
                 </p>
               </div>
@@ -83,7 +156,7 @@ export const HeroSection = () => {
           </div>
 
           <div className="relative animate-slide-in-right">
-            <div className="relative bg-white rounded-3xl p-8 shadow-2xl">
+            <div className="relative bg-white/95 backdrop-blur-sm rounded-3xl p-8 shadow-2xl">
               <img 
                 src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80" 
                 alt="Dra. Daniela Fiorim atendendo paciente"
@@ -111,8 +184,8 @@ export const HeroSection = () => {
                       <card.icon className="h-5 w-5 text-cor-principal" />
                     </div>
                     <div>
-                      <p className="font-medium text-cor-texto text-sm">{card.title}</p>
-                      <p className="text-xs text-cor-texto/70">{card.subtitle}</p>
+                      <p className="font-medium text-white text-sm drop-shadow-md">{card.title}</p>
+                      <p className="text-xs text-white/80 drop-shadow-md">{card.subtitle}</p>
                     </div>
                   </div>
                 ))}
@@ -125,7 +198,7 @@ export const HeroSection = () => {
                 <div
                   key={index}
                   className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
-                    index === currentCardIndex ? 'bg-cor-principal' : 'bg-cor-principal/30'
+                    index === currentCardIndex ? 'bg-cor-principal' : 'bg-white/50'
                   }`}
                 />
               ))}
