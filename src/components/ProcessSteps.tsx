@@ -57,59 +57,74 @@ export const ProcessSteps = () => {
           </p>
         </div>
 
-        {/* Background Image with Content */}
-        <div 
-          className="relative py-16 rounded-3xl overflow-hidden"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80')`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
-          }}
-        >
-          {/* Overlay ofuscado */}
-          <div className="absolute inset-0 bg-white/85 backdrop-blur-[2px]"></div>
-          
-          {/* Content */}
-          <div className="relative z-10 max-w-4xl mx-auto">
-            <div className="space-y-8">
-              {steps.map((step, index) => (
-                <div key={index} className="flex items-start gap-6">
-                  {/* Número */}
-                  <div className="w-12 h-12 bg-cor-principal rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
-                    {step.number}
-                  </div>
-                  
-                  {/* Conteúdo alternado */}
-                  <div className="flex-1">
-                    {index % 2 === 0 ? (
-                      // Texto verde (índices pares: 0, 2, 4...)
-                      <div>
-                        <h3 className="text-2xl font-bold text-cor-principal mb-2">
-                          {step.title}
-                        </h3>
-                        <p className="text-cor-principal/80 text-lg leading-relaxed">
-                          {step.description}
-                        </p>
+        {/* Steps with Alternating Colors */}
+        <div className="space-y-8 max-w-5xl mx-auto">
+          {steps.map((step, index) => {
+            const Icon = step.icon;
+            const isEven = index % 2 === 0;
+            
+            return (
+              <div 
+                key={index}
+                className={`relative rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 ${
+                  isEven 
+                    ? 'bg-gradient-to-r from-cor-principal to-cor-principal/90' 
+                    : 'bg-gradient-to-r from-slate-700 to-slate-600'
+                }`}
+              >
+                {/* Content Container */}
+                <div className="px-8 py-12 md:px-12 md:py-16">
+                  <div className={`flex items-center gap-8 ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+                    
+                    {/* Number and Icon Side */}
+                    <div className="flex-shrink-0">
+                      <div className={`relative w-24 h-24 md:w-32 md:h-32 rounded-full flex items-center justify-center ${
+                        isEven 
+                          ? 'bg-white/20 backdrop-blur-sm border-2 border-white/30' 
+                          : 'bg-cor-principal/20 backdrop-blur-sm border-2 border-cor-principal/30'
+                      }`}>
+                        <div className="text-center">
+                          <div className={`text-3xl md:text-4xl font-bold mb-1 ${
+                            isEven ? 'text-white' : 'text-cor-principal'
+                          }`}>
+                            {step.number}
+                          </div>
+                          <Icon className={`w-6 h-6 md:w-8 md:h-8 mx-auto ${
+                            isEven ? 'text-white/80' : 'text-cor-principal/80'
+                          }`} />
+                        </div>
                       </div>
-                    ) : (
-                      // Texto com fundo (índices ímpares: 1, 3...)
-                      <div className="bg-white/90 backdrop-blur-sm p-6 rounded-xl border border-cor-destaque/20">
-                        <h3 className="text-2xl font-bold text-cor-texto mb-2">
-                          {step.title}
-                        </h3>
-                        <p className="text-cor-texto/70 text-lg leading-relaxed">
-                          {step.description}
-                        </p>
-                      </div>
-                    )}
+                    </div>
+
+                    {/* Content Side */}
+                    <div className="flex-1">
+                      <h3 className={`text-2xl md:text-3xl font-bold mb-4 ${
+                        isEven ? 'text-white' : 'text-white'
+                      }`}>
+                        {step.title}
+                      </h3>
+                      <p className={`text-lg md:text-xl leading-relaxed ${
+                        isEven ? 'text-white/90' : 'text-white/90'
+                      }`}>
+                        {step.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
+
+                {/* Decorative Elements */}
+                <div className={`absolute top-4 right-4 w-20 h-20 rounded-full opacity-10 ${
+                  isEven ? 'bg-white' : 'bg-cor-principal'
+                }`}></div>
+                <div className={`absolute bottom-4 left-4 w-12 h-12 rounded-full opacity-5 ${
+                  isEven ? 'bg-white' : 'bg-cor-principal'
+                }`}></div>
+              </div>
+            );
+          })}
         </div>
 
+        {/* Call to Action */}
         <div className="text-center mt-16">
           <Button 
             size="lg" 
