@@ -69,6 +69,9 @@ export default {
 				'cor-texto': 'var(--cor-texto)',
 				'cor-botao-hover': 'var(--cor-botao-hover)'
 			},
+			fontFamily: {
+				'sans': ['Nunito Sans', 'sans-serif'],
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
