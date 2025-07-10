@@ -21,7 +21,7 @@ export const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 rounded-full flex items-center justify-center overflow-hidden">
+            <div className="w-20 h-20 rounded-full flex items-center justify-center overflow-hidden">
               <img 
                 src="/favicon.png" 
                 alt="Logo Dra. Daniela Fiorim" 
@@ -30,7 +30,7 @@ export const Header = () => {
             </div>
             <div>
               <h1 className="text-xl font-bold text-cor-principal">PREVENT HEALTH</h1>
-              <p className="text-xs text-cor-texto">Fisioterapia Integrativa</p>
+              <p className="text-xs text-cor-texto">Terapias Integrativas</p>
             </div>
           </div>
 
