@@ -1,6 +1,5 @@
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { 
   Calendar, 
   Stethoscope, 
@@ -58,41 +57,56 @@ export const ProcessSteps = () => {
           </p>
         </div>
 
-        <div className="relative">
-          {/* Timeline line */}
-          <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-cor-principal/20"></div>
+        {/* Background Image with Content */}
+        <div 
+          className="relative py-16 rounded-3xl overflow-hidden"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
+          {/* Overlay ofuscado */}
+          <div className="absolute inset-0 bg-white/85 backdrop-blur-[2px]"></div>
           
-          <div className="space-y-12">
-            {steps.map((step, index) => (
-              <div key={index} className={`flex flex-col lg:flex-row items-center gap-8 ${index % 2 === 0 ? 'lg:flex-row-reverse' : ''}`}>
-                <div className="flex-1">
-                  <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm">
-                    <CardContent className="p-6">
-                      <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 bg-cor-principal/10 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-cor-principal/20 transition-colors">
-                          <step.icon className="h-6 w-6 text-cor-principal" />
-                        </div>
-                        <div>
-                          <h3 className="text-xl font-semibold text-cor-texto mb-3">
-                            {step.title}
-                          </h3>
-                          <p className="text-cor-texto/70 leading-relaxed">
-                            {step.description}
-                          </p>
-                        </div>
+          {/* Content */}
+          <div className="relative z-10 max-w-4xl mx-auto">
+            <div className="space-y-8">
+              {steps.map((step, index) => (
+                <div key={index} className="flex items-start gap-6">
+                  {/* Número */}
+                  <div className="w-12 h-12 bg-cor-principal rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                    {step.number}
+                  </div>
+                  
+                  {/* Conteúdo alternado */}
+                  <div className="flex-1">
+                    {index % 2 === 0 ? (
+                      // Texto verde (índices pares: 0, 2, 4...)
+                      <div>
+                        <h3 className="text-2xl font-bold text-cor-principal mb-2">
+                          {step.title}
+                        </h3>
+                        <p className="text-cor-principal/80 text-lg leading-relaxed">
+                          {step.description}
+                        </p>
                       </div>
-                    </CardContent>
-                  </Card>
+                    ) : (
+                      // Texto com fundo (índices ímpares: 1, 3...)
+                      <div className="bg-white/90 backdrop-blur-sm p-6 rounded-xl border border-cor-destaque/20">
+                        <h3 className="text-2xl font-bold text-cor-texto mb-2">
+                          {step.title}
+                        </h3>
+                        <p className="text-cor-texto/70 text-lg leading-relaxed">
+                          {step.description}
+                        </p>
+                      </div>
+                    )}
+                  </div>
                 </div>
-
-                {/* Step number */}
-                <div className="w-16 h-16 bg-cor-principal rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg z-10">
-                  {step.number}
-                </div>
-
-                <div className="flex-1 lg:block hidden"></div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
 
