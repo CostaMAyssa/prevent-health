@@ -31,11 +31,7 @@ export const Header = () => {
   }, []);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-cor-fundo/95 backdrop-blur-md shadow-lg' 
-        : 'bg-cor-fundo shadow-md'
-    }`}>
+    <header className="fixed top-0 left-0 right-0 z-[100] bg-cor-fundo shadow-md transition-all duration-300">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">

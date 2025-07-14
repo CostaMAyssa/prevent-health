@@ -6,11 +6,11 @@ export const HeroSection = () => {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  // Lista dos vídeos com temas de natureza, terapias integrativas e bem-estar
+  // Lista dos vídeos locais com temas de natureza, terapias integrativas e bem-estar
   const videos = [
-    "https://videos.pexels.com/video-files/6985045/6985045-uhd_2560_1440_25fps.mp4", // Meditação e yoga em natureza
-    "https://videos.pexels.com/video-files/6896096/6896096-uhd_2560_1440_25fps.mp4", // Pessoa relaxando na natureza
-    "https://videos.pexels.com/video-files/7991088/7991088-uhd_2560_1440_25fps.mp4"  // Paisagem natural serena
+    "/src/lib/videos/3987799-hd_1920_1080_24fps.mp4", // Primeiro vídeo local
+    "/src/lib/videos/8033215-uhd_3840_2160_24fps.mp4", // Segundo vídeo local
+    "/src/lib/videos/1093662-hd_1920_1080_30fps.mp4"  // Terceiro vídeo local
   ];
 
   // Alternância dos vídeos
@@ -51,7 +51,6 @@ export const HeroSection = () => {
         loop 
         muted 
         playsInline
-        poster="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1920&q=80"
         className="absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-1000"
         key={currentVideoIndex}
       >
@@ -89,7 +88,7 @@ export const HeroSection = () => {
           {/* Botão de agendamento */}
           <div className="pt-8">
             <Button 
-              className="bg-cor-principal hover:bg-cor-botao-hover text-white px-8 py-4 text-lg font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              className="bg-[#25D366] hover:bg-[#1FB157] text-white px-8 py-4 text-lg font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               onClick={() => window.open('https://wa.me/5527999999999?text=Olá! Gostaria de agendar uma consulta.', '_blank')}
             >
               Agendar Consulta

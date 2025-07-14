@@ -92,7 +92,7 @@ export const Footer = () => {
               <p>contato@danielafiorim.com.br</p>
             </div>
             <Button 
-              className="mt-6 bg-cor-principal hover:bg-cor-botao-hover text-white px-6 py-3 rounded-full shadow-elegant hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-medium"
+              className="mt-6 bg-[#25D366] hover:bg-[#1FB157] text-white px-6 py-3 rounded-full shadow-elegant hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-medium"
               onClick={() => window.open('https://wa.me/5562998221110', '_blank')}
             >
               Agendar Consulta

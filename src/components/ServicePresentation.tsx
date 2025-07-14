@@ -99,9 +99,6 @@ export const ServicePresentation = () => {
               backgroundRepeat: 'no-repeat'
             }}
           >
-            {/* Overlay ofuscado */}
-            <div className="absolute inset-0 bg-white/85 backdrop-blur-[2px]"></div>
-            
             {/* Content */}
             <div className="relative z-10">
               {/* Therapies Title */}
@@ -179,7 +176,7 @@ export const ServicePresentation = () => {
               <div className="text-center mt-16">
                 <Button 
                   size="lg" 
-                  className="btn-elegant text-white px-8 py-4 text-lg font-semibold rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
+                  className="bg-[#25D366] hover:bg-[#1FB157] text-white px-8 py-4 text-lg font-semibold rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
                   onClick={() => window.open('https://wa.me/5562998221110', '_blank')}
                 >
                   Agende sua consulta pelo WhatsApp
