@@ -173,21 +173,6 @@ html {
   animation: fadeInScale 0.8s ease-out 0.8s both;
 }
 
-/* Responsividade para vídeo de fundo */
-@media (max-width: 768px) {
-  #hero video {
-    display: none;
-  }
-  
-  #hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1920&q=80') 
-                no-repeat center center;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-}
-
 /* Efeito de typing sutil */
 .typing-effect {
   overflow: hidden;
