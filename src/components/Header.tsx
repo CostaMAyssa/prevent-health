@@ -33,8 +33,8 @@ export const Header = () => {
   return (
     <header className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
       isScrolled 
-        ? 'bg-cor-fundo/95 backdrop-blur-md shadow-lg translate-y-0' 
-        : 'bg-transparent translate-y-0'
+        ? 'bg-cor-fundo/95 backdrop-blur-md shadow-lg' 
+        : 'bg-cor-fundo shadow-md'
     }`}>
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
@@ -48,9 +48,7 @@ export const Header = () => {
             </div>
             <div>
               <h1 className="text-xl font-bold text-cor-principal">PREVENT HEALTH</h1>
-              <p className={`text-xs transition-colors duration-300 ${
-                isScrolled ? 'text-cor-texto' : 'text-white'
-              }`}>Terapias Integrativas</p>
+              <p className="text-xs text-cor-texto">Terapias Integrativas</p>
             </div>
           </div>
 
@@ -60,11 +58,7 @@ export const Header = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className={`text-sm font-medium transition-colors duration-300 ${
-                  isScrolled 
-                    ? 'text-cor-texto hover:text-cor-principal' 
-                    : 'text-white hover:text-cor-principal'
-                }`}
+                className="text-sm font-medium text-cor-texto hover:text-cor-principal transition-colors duration-300"
               >
                 {item.label}
               </a>
@@ -75,9 +69,7 @@ export const Header = () => {
           <Button
             variant="ghost"
             size="icon"
-            className={`md:hidden transition-colors duration-300 ${
-              isScrolled ? 'text-cor-texto' : 'text-white'
-            }`}
+            className="md:hidden text-cor-texto"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -92,11 +84,7 @@ export const Header = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className={`text-sm font-medium transition-colors duration-300 ${
-                    isScrolled 
-                      ? 'text-cor-texto hover:text-cor-principal' 
-                      : 'text-white hover:text-cor-principal'
-                  }`}
+                  className="text-sm font-medium text-cor-texto hover:text-cor-principal transition-colors duration-300"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
