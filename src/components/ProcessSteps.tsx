@@ -128,11 +128,11 @@ export const ProcessSteps = () => {
         <div className="text-center mt-16">
           <Button 
             size="lg" 
-            className="bg-cor-principal hover:bg-cor-botao-hover text-white px-8 py-4 text-lg font-semibold rounded-full shadow-elegant hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            className="bg-cor-principal hover:bg-cor-botao-hover text-white px-6 py-4 text-base md:text-lg font-semibold rounded-full shadow-elegant hover:shadow-xl transition-all duration-300 transform hover:scale-105 w-full md:w-auto"
             onClick={() => alert('Download do PDF em breve')}
           >
-            <Download className="h-5 w-5 mr-2" />
-            Baixe aqui o PDF completo com detalhes do nosso atendimento
+            <Download className="h-5 w-5 mr-2 flex-shrink-0" />
+            <span className="whitespace-normal text-center">Baixe aqui o PDF completo com detalhes do nosso atendimento</span>
           </Button>
         </div>
       </div>

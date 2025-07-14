@@ -7,7 +7,7 @@ export const HeroSection = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   return (
-    <section id="hero" className="relative h-screen flex items-start justify-end overflow-hidden pt-48 md:pt-64">
+    <section id="hero" className="relative h-screen flex items-center justify-center text-center md:items-start md:justify-end md:text-left pt-24 md:pt-64">
       {/* Vídeo de Fundo */}
       <video 
         ref={videoRef}
@@ -24,8 +24,8 @@ export const HeroSection = () => {
       {/* Overlay escuro para melhor legibilidade */}
       <div className="absolute inset-0 bg-black/50 z-10"></div>
 
-      {/* Conteúdo alinhado à direita, texto à esquerda */}
-      <div className="relative z-20 pr-8 md:pr-16 lg:pr-20 xl:pr-24 max-w-2xl text-left">
+      {/* Conteúdo alinhado */}
+      <div className="relative z-20 px-8 md:px-0 md:pr-16 lg:pr-20 xl:pr-24 max-w-2xl">
         <div className="space-y-8">
           {/* Frase de destaque */}
           <div className="space-y-6">
