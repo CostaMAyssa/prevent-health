@@ -108,71 +108,43 @@ export const HeroSection = () => {
 
       {/* Conteúdo da Hero Section */}
       <div className="container mx-auto px-4 relative z-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
+        <div className="flex items-center justify-center min-h-screen">
+          <div className="text-center max-w-4xl space-y-8">
+            {/* Frase de destaque */}
             <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight animate-hero-title drop-shadow-lg">
-                Saúde Integral e Cuidado Humanizado com a{" "}
-                <span className="text-cor-principal">Dra. Daniela Fiorim</span>
+                "Seu corpo fala, sua mente sente — e aqui,{" "}
+                <span className="text-cor-principal">nós ouvimos tudo isso.</span>"
               </h1>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 animate-hero-button">
-              {/* Seta animada para descobrir mais */}
-              <div className="flex flex-col items-center gap-4 mt-8">
-                <div className="text-center">
-                  <p className="text-lg text-white/90 mb-2 leading-relaxed drop-shadow-md">
-                    Sua jornada de transformação começa aqui
-                  </p>
-                  <p className="text-sm text-cor-principal font-medium drop-shadow-md">
-                    Descubra como podemos cuidar de você ↓
-                  </p>
-                </div>
-                
-                <div className="relative group cursor-pointer" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
-                  {/* Círculo de fundo */}
-                  <div className="w-16 h-16 bg-gradient-to-br from-cor-principal to-cor-botao-hover rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-110 animate-float">
-                    {/* Seta para baixo */}
-                    <svg 
-                      className="w-6 h-6 text-white transform group-hover:translate-y-1 transition-transform duration-300" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                    </svg>
-                </div>
-                  
-                  {/* Ondas de expansão */}
-                  <div className="absolute inset-0 rounded-full border-2 border-cor-principal/30 animate-ping"></div>
-                  <div className="absolute inset-0 rounded-full border-2 border-cor-destaque/20 animate-pulse" style={{animationDelay: '0.5s'}}></div>
-                </div>
-                
-                <p className="text-xs text-white/70 italic drop-shadow-md">
-                  Continue explorando
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="relative animate-slide-in-right">
-            <div className="relative bg-white/95 backdrop-blur-sm rounded-3xl p-8 shadow-2xl">
-              <img 
-                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80" 
-                alt="Dra. Daniela Fiorim atendendo paciente"
-                className="w-full h-96 object-cover rounded-2xl"
-              />
-              <div className="absolute -top-6 -right-6 w-32 h-32 bg-cor-destaque/20 rounded-full animate-float"></div>
-              <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-cor-principal/20 rounded-full animate-float" style={{animationDelay: '1s'}}></div>
+            {/* Nome da clínica e subtítulo */}
+            <div className="space-y-4 animate-hero-description">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-cor-principal drop-shadow-lg">
+                PREVENT & HEALTH
+              </h2>
+              <p className="text-lg md:text-xl text-white/90 drop-shadow-md">
+                Terapias Integrativas
+              </p>
             </div>
 
-            {/* Card rotativo - agora embaixo da foto */}
-            <div className="pt-6 flex justify-center">
-              <div className="relative w-64 h-16 overflow-hidden">
+            {/* Botão de agendamento */}
+            <div className="animate-hero-button">
+              <Button 
+                className="bg-cor-principal hover:bg-cor-botao-hover text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                onClick={() => window.open('https://wa.me/5527999999999?text=Olá! Gostaria de agendar uma consulta.', '_blank')}
+              >
+                Agendar Consulta
+              </Button>
+            </div>
+
+            {/* Card rotativo */}
+            <div className="pt-8 flex justify-center">
+              <div className="relative w-80 h-16 overflow-hidden">
                 {cards.map((card, index) => (
                   <div
                     key={index}
-                    className={`absolute inset-0 flex items-center gap-2 transition-all duration-500 transform ${
+                    className={`absolute inset-0 flex items-center justify-center gap-3 transition-all duration-500 transform ${
                       index === currentCardIndex 
                         ? 'translate-x-0 opacity-100' 
                         : index < currentCardIndex 
@@ -180,28 +152,60 @@ export const HeroSection = () => {
                           : 'translate-x-full opacity-0'
                     }`}
                   >
-                    <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md flex-shrink-0">
-                      <card.icon className="h-5 w-5 text-cor-principal" />
+                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md flex-shrink-0">
+                      <card.icon className="h-6 w-6 text-cor-principal" />
                     </div>
-                    <div>
-                      <p className="font-medium text-white text-sm drop-shadow-md">{card.title}</p>
-                      <p className="text-xs text-white/80 drop-shadow-md">{card.subtitle}</p>
+                    <div className="text-center">
+                      <p className="font-medium text-white text-base drop-shadow-md">{card.title}</p>
+                      <p className="text-sm text-white/80 drop-shadow-md">{card.subtitle}</p>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Indicadores de progresso - agora embaixo da foto */}
-            <div className="flex justify-center gap-1.5 pt-3">
+            {/* Indicadores de progresso */}
+            <div className="flex justify-center gap-2 pt-4">
               {cards.map((_, index) => (
                 <div
                   key={index}
-                  className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
                     index === currentCardIndex ? 'bg-cor-principal' : 'bg-white/50'
                   }`}
                 />
               ))}
+            </div>
+
+            {/* Seta animada para descobrir mais */}
+            <div className="flex flex-col items-center gap-4 pt-8">
+              <div className="text-center">
+                <p className="text-sm text-cor-principal font-medium drop-shadow-md">
+                  Descubra como podemos cuidar de você ↓
+                </p>
+              </div>
+              
+              <div className="relative group cursor-pointer" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
+                {/* Círculo de fundo */}
+                <div className="w-16 h-16 bg-gradient-to-br from-cor-principal to-cor-botao-hover rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-110 animate-float">
+                  {/* Seta para baixo */}
+                  <svg 
+                    className="w-6 h-6 text-white transform group-hover:translate-y-1 transition-transform duration-300" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                  </svg>
+              </div>
+                
+                {/* Ondas de expansão */}
+                <div className="absolute inset-0 rounded-full border-2 border-cor-principal/30 animate-ping"></div>
+                <div className="absolute inset-0 rounded-full border-2 border-cor-destaque/20 animate-pulse" style={{animationDelay: '0.5s'}}></div>
+              </div>
+              
+              <p className="text-xs text-white/70 italic drop-shadow-md">
+                Continue explorando
+              </p>
             </div>
           </div>
         </div>
