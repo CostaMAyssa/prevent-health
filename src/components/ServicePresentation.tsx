@@ -2,50 +2,50 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { Play, Heart, Leaf, Zap, Droplets, Brain, Shield } from "lucide-react";
+import { Play, Heart, Leaf, Zap, Brain, Shield, Activity, Syringe } from "lucide-react";
 
 export const ServicePresentation = () => {
   const therapies = [
     {
       icon: Heart,
       title: "Microfisioterapia",
-      description: "Para traumas e disfunções celulares",
-      tooltip: "Você sente dores que não consegue explicar? Tensões que parecem vir do nada? A Microfisioterapia ajuda seu corpo a liberar traumas emocionais guardados, aliviando dores físicas crônicas, ansiedade e aquela sensação de 'peso' que você carrega. É como dar ao seu corpo a permissão para finalmente se curar.",
+      description: "Técnica de terapia manual para auto-cura",
+      tooltip: "Microfisioterapia é uma técnica de terapia manual criada na França há mais de 30 anos, que consiste em identificar por meio de gestos manuais em mapas corporais a Cicatriz Patológica, a causa primária de uma doença ou sintoma. No mesmo momento os toques sutis vão estimular o processo de reparação corporal e a auto-cura do organismo. A microfisioterapia é aplicada à todas as idades, desde crianças a partir de 06 meses de idade até idosos, sem contra indicações. Indicações: – Dores Musculares e Articulares Crônicas ou Agudas, – Distúrbios do Sono, – Intolerância Alimentar/Refluxo gastroesofágico, – Alergias e Dermatites, – Asma, Bronquite, Rinites e Sinusites, – Medos, Fobias e Síndrome do Pânico, – Depressão/Ansiedade, – Déficit de Atenção e Hiperatividade, – Traumas Emocionais (perdas, abandonos, separações, etc), – Dores de Cabeça, Cefaléia e Enxaquecas.",
       delay: "0s"
     },
     {
-      icon: Droplets,
-      title: "Ozonioterapia",
-      description: "Para oxigenação e desintoxicação",
-      tooltip: "Se você se sente constantemente cansado, com baixa imunidade ou enfrentando processos inflamatórios, a Ozonioterapia pode ser sua aliada. Ela revitaliza suas células, combate infecções naturalmente e devolve aquela energia que você sentia ter perdido. É como renovar seu corpo de dentro para fora.",
+      icon: Syringe,
+      title: "Terapia Neural",
+      description: "Estímulo do sistema nervoso para autocura",
+      tooltip: "A terapia neural consiste na aplicação de anestésico(procaína) em pontos do corpo humano, similarmente à acupuntura. Surgiu na Alemanha, no início do século XX, é usada em vários países da Europa e da América Latina. A terapia neural estimula o sistema nervoso autônomo, com o objetivo de que este desencadeie a autocura. Ela é responsável por conectar e regular todo o funcionamento do organismo através de repolarização das células, permitindo que o corpo se autorregule e recupere seu estado de harmonia natural. Quais doenças podem ser tratadas com a terapia neural: -dores em geral(cervicalgia, lombalgias,hérnia de disco e lesões do esporte); -recuperação pós operatório; -artrite, artrose e transtornos reumáticos; -Fibromialgia; -desequilíbrios do sistema nervoso e mentais (ansiedade, fobias, insônia e depressão). Os resultados já são perceptíveis na primeira aplicação, no entanto o número de sessões a serem realizadas dependerá do organismo e demanda de cada paciente.",
       delay: "0.2s"
     },
     {
-      icon: Zap,
-      title: "Acupuntura Quântica",
-      description: "Para equilíbrio energético",
-      tooltip: "Sente que sua energia está 'bagunçada'? Insônia, irritabilidade, dores sem causa aparente? A Acupuntura Quântica trabalha nos pontos energéticos que conectam corpo e mente, restaurando seu equilíbrio natural. É especialmente eficaz para ansiedade, depressão e quando você sente que 'algo não está certo'.",
+      icon: Activity,
+      title: "Biorressonância",
+      description: "Análise e monitoramento de desequilíbrios",
+      tooltip: "Com o desenvolvimento da tecnologia, tornou-se possível a análise e monitoramento eletrônico dos desequilíbrios do nosso corpo. A biorressonância foi criada através da junção do conhecimento da acupuntura e a mensuração precisa de ondas eletromagnéticas, permitindo assim a identificação de alterações biofísicas e bioquímicas do organismo. A avaliação por biorressonância utiliza tanto a frequência eletromagnética do corpo e as frequências únicas e individuais de cada órgão para fazer seu exame. Isso é possível porque se sabe que toda matéria tem sua própria frequência vibracional. Quando se insere outros fatores, como emoções, parasitas, pensamentos, metais pesados, sons, radiações, toxinas o organismo pode entrar em desequilíbrio e, em consequência, ocasionar o aparecimento de doenças. Com a biorressonância é possível a identificação de inflamações, alergias alimentares, parasitas, metais pesados, desequilíbrios de nutrientes e órgãos. O procedimento da biorressonância vem sendo utilizado há mais de 20 anos no mundo todo, totalmente seguro e eficiente. É uma abordagem integrativa que visa conceder alívio aos pacientes da maneira mais rápida e eficaz, podendo ser realizada presencialmente e a distância.",
       delay: "0.4s"
     },
     {
       icon: Leaf,
-      title: "Terapia Ortobiomolecular",
-      description: "Com substâncias naturais",
-      tooltip: "Seu corpo precisa de nutrientes específicos para funcionar bem emocionalmente. Se você enfrenta mudanças de humor, falta de concentração, fadiga mental ou sente que sua mente está sempre 'acelerada', esta terapia reequilibra sua bioquímica naturalmente, usando o que a natureza oferece de melhor.",
+      title: "Terapia Ortomolecular",
+      description: "Medicina funcional e integrativa",
+      tooltip: "É uma abordagem da medicina funcional integrativa com um olhar humanizado da integralidade do ser, e não apenas atenção aos sintomas. A terapia ortomolecular promove assim bem-estar físico, mental e emocional; qualidade de vida e longevidade saudável. A terapia ortomolecular tem como objetivo desintoxicar, desinflamar, deglicar, repor macro e micro nutrientes; remover excesso de toxinas e oxidação celular. Consiste em investigar desequilíbrios e aplicar meios metodizados individualmente, objetivando o equilíbrio homeostático da função celular. Através da suplementação de nutrientes essenciais é muito indicada para fortalecer a imunidade; fadiga mitocondrial e adrenal; tratamento de inflamações agudas e crônicas; prevenção de doenças crônicas e degenerativas; estímulo cognitivo, foco e concentração; equilíbrio do estresse mental e distúrbio do sono.",
       delay: "0.6s"
     },
     {
       icon: Brain,
       title: "Psych-K",
-      description: "Para reprogramação biológica",
-      tooltip: "Você se sabota sem saber por quê? Tem medos que limitam sua vida? O Psych-K trabalha diretamente com crenças inconscientes que geram ansiedade, baixa autoestima e padrões destrutivos. É como 'reprogramar' sua mente para trabalhar a seu favor, não contra você.",
+      description: "Reprogramação de crenças subconscientes",
+      tooltip: "PSYCH-K® é um método simples e direto para identificar e mudar crenças subconscientes auto limitantes, que perpetuam os velhos hábitos de pensamento e comportamento que você gostaria de mudar. Uma poderosa metodologia para atingir as metas e mudanças que não são passíveis apenas com a força de vontade. Estudos em neurociência indicam que 95% de nossa consciência é, na verdade, subconsciente. É a mente subconsciente que guarda nossas atitudes, valores e crenças. É um processo simples que ajuda você a se comunicar com seu subconsciente, onde quase todos os comportamentos humanos – construtivos e destrutivos – se originam, para que você possa mudar as crenças que limitam a sua autoestima, seus relacionamentos, o desempenho no trabalho e até mesmo sua saúde física! EM QUE CASOS O PSYCH-K® PODE AJUDAR? Em casos de desequilibrios como: auto-estima baixa, dificuldades de prosperar, dificuldades para se relacionar socialmente e amorosamente, sentimento de inferioridade, dificuldade de dirigir, dificuldade de se aceitar, sentimento de culpa, pessimismo, compulsões alimentares, tiques nervosos, timidez, dificuldade de falar em público, dificuldade de cobrar por seus serviços, dificuldade de aprendizado, alergias, compulsões, vícios(roer unhas, cigarro, drogas, chocolate), traumas por morte, separação e traumas em geral, fobias, sindrome do pânico, ansiedade, insônia, depressão, dores, doenças entre outros. “¨Nas profundezas do seu subconsciente, à espera de se expandir e de se expressar, há uma sabedoria infinita, há um poder infinito, há um estoque ilimitado de tudo o que é necessário para uma vida perfeita. Comece agora a descobrir essas potencialidades das profundezas da sua mente e elas tomarão forma no mundo exterior”",
       delay: "0.8s"
     },
     {
       icon: Shield,
       title: "Terapias Biofísicas",
-      description: "Para bem-estar integral",
-      tooltip: "Quando você precisa de um cuidado completo, que vê você como um todo - não apenas seus sintomas. Essas terapias integram corpo, mente e energia para tratar desde dores crônicas até estresse emocional, insônia e aquela sensação de estar sempre 'desconectado' de si mesmo.",
+      description: "Tecnologias avançadas para equilíbrio natural",
+      tooltip: "As terapias biofísicas utilizam tecnologias avançadas que emitem frequências específicas para estimular o equilíbrio natural do corpo, desintoxicar, fortalecer o sistema imunológico e promover saúde física, emocional e mental. Baseadas nos estudos de Royal Rife e Hulda Clark, essas terapias atuam em nível celular por meio de dispositivos modernos como RPD (plasma), Hidrovitalis (desintoxicação iônica), PC Zapper, NeuroSpa (estimulação elétrica craniana), ColorGen Pro (cromoterapia), TMS (pulso magnético) e Fotobiomodulação (laser e LEDs). Indicadas para dores crônicas, doenças autoimunes, estresse, ansiedade, depressão, insônia, entre outros.",
       delay: "1s"
     }
   ];
@@ -157,7 +157,7 @@ export const ServicePresentation = () => {
                     </TooltipTrigger>
                     <TooltipContent 
                       side="top" 
-                      className="max-w-sm p-4 bg-white/95 backdrop-blur-sm border-cor-principal/20 shadow-xl"
+                      className="max-w-sm p-4 bg-white/95 backdrop-blur-sm border-cor-principal/20 shadow-xl max-h-[300px] overflow-y-auto"
                     >
                       <div className="space-y-2">
                         <h4 className="font-semibold text-cor-principal text-sm">

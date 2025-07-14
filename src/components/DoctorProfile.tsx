@@ -49,23 +49,11 @@ export const DoctorProfile = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
             <div className="relative bg-white rounded-3xl p-8 shadow-2xl">
-              <video 
-                autoPlay 
-                loop 
-                muted 
-                playsInline
-                className="w-full h-96 object-cover rounded-2xl"
-                style={{
-                  filter: 'brightness(0.9) contrast(1.1)',
-                }}
-              >
-                <source src="/src/lib/videos/3987799-hd_1920_1080_24fps.mp4" type="video/mp4" />
-                <img 
-                  src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=80" 
-                  alt="Dra. Daniela Fiorim"
-                  className="w-full h-96 object-cover rounded-2xl"
-                />
-              </video>
+              <img 
+                src="/fotos/IMG_dr.PNG"
+                alt="Dra. Daniela Fiorim"
+                className="w-full object-cover rounded-2xl"
+              />
               <div className="absolute -top-6 -right-6 w-24 h-24 bg-cor-destaque/20 rounded-full animate-float"></div>
               <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-cor-principal/20 rounded-full animate-float" style={{animationDelay: '1.5s'}}></div>
             </div>
