@@ -9,11 +9,11 @@ export const Header = () => {
 
   const menuItems = [
     { label: "Início", href: "#hero" },
+    { label: "Dra. Daniela", href: "#dra-daniela" },
     { label: "Terapias", href: "#services" },
     { label: "Benefícios", href: "#benefits" },
     { label: "Pilares", href: "#pillars" },
     { label: "Atendimento", href: "#process" },
-    { label: "Sobre", href: "#about" },
     { label: "Localização", href: "#location" },
   ];
 

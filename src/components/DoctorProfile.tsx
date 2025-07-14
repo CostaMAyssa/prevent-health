@@ -33,8 +33,19 @@ export const DoctorProfile = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-cor-fundo">
-      <div className="container mx-auto px-4">
+    <section id="dra-daniela" className="py-20 bg-cor-fundo relative overflow-hidden">
+      {/* Overlay de textura de areia */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 z-0 pointer-events-none"
+        style={{
+          backgroundImage: "url('/src/lib/textures/sand.png')",
+          opacity: 0.18,
+          backgroundRepeat: 'repeat',
+          backgroundSize: '400px 400px',
+        }}
+      />
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
             <div className="relative bg-white rounded-3xl p-8 shadow-2xl">
@@ -63,8 +74,8 @@ export const DoctorProfile = () => {
           <div className="space-y-8">
             <div className="space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold text-cor-texto">
-                Daniela Nunes Viana Fiorim{" "}
-                <span className="text-cor-principal">– Fisioterapeuta</span>
+                Dra. Daniela
+                <span className="text-cor-principal"> – Fisioterapeuta</span>
               </h2>
               <p className="text-sm text-cor-texto">CREFITO 17563F</p>
               <p className="text-lg text-cor-texto leading-relaxed">
