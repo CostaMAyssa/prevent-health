@@ -126,19 +126,19 @@ export const BenefitsSection = () => {
           <div className="space-y-12">
             <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-cor-texto mb-6">
-                Benefícios da{" "}
+            Benefícios da{" "}
                 <span className="text-cor-principal">Fisioterapia Integrativa</span>
-              </h2>
+          </h2>
               <p className="text-lg text-cor-texto/80 max-w-3xl mx-auto">
                 Descubra as vantagens de uma abordagem integrativa para sua saúde
-              </p>
-            </div>
+          </p>
+        </div>
 
             {/* Benefits Cards */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.slice(0, visibleCards).map((benefit, index) => (
-                <Card 
-                  key={index} 
+            <Card 
+              key={index} 
                   className="group bg-white/70 backdrop-blur-sm border-0 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 animate-fade-in-up"
                   style={{
                     animationDelay: `${index * 0.2}s`,
@@ -152,25 +152,25 @@ export const BenefitsSection = () => {
                     {/* Icon */}
                     <div className="relative w-16 h-16 bg-gradient-to-br from-cor-principal to-cor-botao-hover rounded-full flex items-center justify-center mx-auto mb-4 shadow-md group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-110">
                       <benefit.icon className="h-8 w-8 text-white" />
-                    </div>
+                </div>
                     
                     {/* Content */}
                     <div className="relative z-10">
                       <h3 className="text-lg font-semibold text-cor-texto mb-3 group-hover:text-cor-principal transition-colors duration-300">
-                        {benefit.title}
-                      </h3>
+                  {benefit.title}
+                </h3>
                       <p className="text-cor-texto/70 text-sm leading-relaxed">
-                        {benefit.description}
-                      </p>
+                  {benefit.description}
+                </p>
                     </div>
                     
                     {/* Floating particles effect */}
                     <div className="absolute top-4 right-4 w-2 h-2 bg-cor-principal/30 rounded-full animate-ping"></div>
                     <div className="absolute bottom-4 left-4 w-1 h-1 bg-cor-destaque/40 rounded-full animate-pulse"></div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
 
             {/* Action Buttons */}
             <div className="text-center space-y-4">

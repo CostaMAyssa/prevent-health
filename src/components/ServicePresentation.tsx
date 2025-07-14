@@ -53,14 +53,14 @@ export const ServicePresentation = () => {
   return (
     <TooltipProvider>
       <section id="services" className="py-20 bg-gradient-to-br from-cor-fundo to-white">
-        <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4">
           
           {/* Video Section */}
           <div className="text-center mb-20">
             <h2 className="text-3xl md:text-4xl font-bold text-cor-texto mb-6">
               Vamos conhecer nossa{" "}
               <span className="text-cor-principal">clínica</span>
-            </h2>
+              </h2>
             <p className="text-lg text-cor-texto mb-8 max-w-2xl mx-auto">
               Descubra nosso espaço acolhedor e nossa abordagem integrativa para sua saúde e bem-estar
             </p>
@@ -81,8 +81,8 @@ export const ServicePresentation = () => {
                     Assista ao vídeo e descubra como nossas terapias integrativas podem transformar sua vida
                   </p>
                 </div>
-              </div>
-              
+            </div>
+
               {/* Floating decorative elements */}
               <div className="absolute -top-6 -right-6 w-32 h-32 bg-cor-destaque/20 rounded-full animate-float"></div>
               <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-cor-principal/20 rounded-full animate-float" style={{animationDelay: '1s'}}></div>
@@ -116,7 +116,7 @@ export const ServicePresentation = () => {
                 <p className="text-sm text-cor-texto/70 max-w-2xl mx-auto">
                   💡 <em>Passe o mouse sobre cada terapia para descobrir como ela pode ajudar você</em>
                 </p>
-              </div>
+                  </div>
 
               {/* Floating Therapy Cards */}
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative px-4">
@@ -137,26 +137,26 @@ export const ServicePresentation = () => {
                           {/* Icon */}
                           <div className="relative w-16 h-16 bg-gradient-to-br from-cor-principal to-cor-botao-hover rounded-full flex items-center justify-center mx-auto mb-4 shadow-md group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-110">
                             <therapy.icon className="h-8 w-8 text-white" />
-                          </div>
+                </div>
                           
                           {/* Content */}
                           <div className="relative z-10">
                             <h3 className="text-lg font-semibold text-cor-texto mb-3 group-hover:text-cor-principal transition-colors duration-300">
                               {therapy.title}
-                            </h3>
+                  </h3>
                             <p className="text-cor-texto/70 text-sm leading-relaxed mb-2">
                               {therapy.description}
                             </p>
                             <p className="text-xs text-cor-principal/60 italic">
                               Clique para saber mais
-                            </p>
-                          </div>
+                  </p>
+                </div>
                           
                           {/* Floating particles effect */}
                           <div className="absolute top-4 right-4 w-2 h-2 bg-cor-principal/30 rounded-full animate-ping"></div>
                           <div className="absolute bottom-4 left-4 w-1 h-1 bg-cor-destaque/40 rounded-full animate-pulse"></div>
-                        </CardContent>
-                      </Card>
+              </CardContent>
+            </Card>
                     </TooltipTrigger>
                     <TooltipContent 
                       side="top" 
@@ -189,9 +189,9 @@ export const ServicePresentation = () => {
                 </p>
               </div>
             </div>
-          </div>
         </div>
-      </section>
+      </div>
+    </section>
     </TooltipProvider>
   );
 };
