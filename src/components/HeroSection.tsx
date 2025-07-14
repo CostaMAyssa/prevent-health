@@ -6,11 +6,11 @@ export const HeroSection = () => {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  // Lista dos vídeos locais
+  // Lista dos vídeos com temas de natureza, terapias integrativas e bem-estar
   const videos = [
-    "/videos/8313516-hd_1920_1080_30fps.mp4",
-    "/videos/5793441-uhd_3840_2160_25fps.mp4", 
-    "/videos/4520173-hd_1920_1080_30fps.mp4"
+    "https://videos.pexels.com/video-files/6985045/6985045-uhd_2560_1440_25fps.mp4", // Meditação e yoga em natureza
+    "https://videos.pexels.com/video-files/6896096/6896096-uhd_2560_1440_25fps.mp4", // Pessoa relaxando na natureza
+    "https://videos.pexels.com/video-files/7991088/7991088-uhd_2560_1440_25fps.mp4"  // Paisagem natural serena
   ];
 
   // Alternância dos vídeos
@@ -51,7 +51,7 @@ export const HeroSection = () => {
         loop 
         muted 
         playsInline
-        poster="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1920&q=80"
+        poster="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1920&q=80"
         className="absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-1000"
         key={currentVideoIndex}
       >
