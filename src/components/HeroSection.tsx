@@ -7,7 +7,7 @@ export const HeroSection = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   return (
-    <section id="hero" className="relative h-screen flex items-center justify-end overflow-hidden">
+    <section id="hero" className="relative h-screen flex items-start justify-end overflow-hidden pt-48 md:pt-64">
       {/* Vídeo de Fundo */}
       <video 
         ref={videoRef}
