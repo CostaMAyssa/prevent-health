@@ -1,46 +1,10 @@
 
 import { Button } from "@/components/ui/button";
-import { useState, useEffect, useRef } from "react";
+import { useRef } from "react";
+import heroVideo from "../lib/videos/WhatsApp Video 2025-07-14 at 19.49.53.mp4";
 
 export const HeroSection = () => {
-  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const videoRef = useRef<HTMLVideoElement>(null);
-
-  // Lista dos vídeos locais com temas de natureza, terapias integrativas e bem-estar
-  const videos = [
-    "/src/lib/videos/3987799-hd_1920_1080_24fps.mp4", // Primeiro vídeo local
-    "/src/lib/videos/8033215-uhd_3840_2160_24fps.mp4", // Segundo vídeo local
-    "/src/lib/videos/1093662-hd_1920_1080_30fps.mp4"  // Terceiro vídeo local
-  ];
-
-  // Alternância dos vídeos
-  useEffect(() => {
-    const videoInterval = setInterval(() => {
-      setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % videos.length);
-    }, 15000); // Troca a cada 15 segundos
-
-    return () => clearInterval(videoInterval);
-  }, [videos.length]);
-
-  // Controlar a transição dos vídeos
-  useEffect(() => {
-    if (videoRef.current) {
-      const video = videoRef.current;
-      video.style.opacity = '0';
-      
-      const handleLoadedData = () => {
-        video.style.transition = 'opacity 1s ease-in-out';
-        video.style.opacity = '1';
-      };
-
-      video.addEventListener('loadeddata', handleLoadedData);
-      video.load(); // Recarrega o vídeo
-
-      return () => {
-        video.removeEventListener('loadeddata', handleLoadedData);
-      };
-    }
-  }, [currentVideoIndex]);
 
   return (
     <section id="hero" className="relative h-screen flex items-center justify-end overflow-hidden">
@@ -51,18 +15,17 @@ export const HeroSection = () => {
         loop 
         muted 
         playsInline
-        className="absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-1000"
-        key={currentVideoIndex}
+        className="absolute inset-0 w-full h-full object-cover z-0"
       >
-        <source src={videos[currentVideoIndex]} type="video/mp4" />
+        <source src={heroVideo} type="video/mp4" />
         Seu navegador não suporta a tag de vídeo.
       </video>
 
       {/* Overlay escuro para melhor legibilidade */}
       <div className="absolute inset-0 bg-black/50 z-10"></div>
 
-      {/* Conteúdo alinhado à direita */}
-      <div className="relative z-20 pr-8 md:pr-16 lg:pr-20 xl:pr-24 max-w-2xl text-right">
+      {/* Conteúdo alinhado à direita, texto à esquerda */}
+      <div className="relative z-20 pr-8 md:pr-16 lg:pr-20 xl:pr-24 max-w-2xl text-left">
         <div className="space-y-8">
           {/* Frase de destaque */}
           <div className="space-y-6">
@@ -89,25 +52,12 @@ export const HeroSection = () => {
           <div className="pt-8">
             <Button 
               className="bg-[#25D366] hover:bg-[#1FB157] text-white px-8 py-4 text-lg font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-              onClick={() => window.open('https://wa.me/5527999999999?text=Olá! Gostaria de agendar uma consulta.', '_blank')}
+              onClick={() => window.open('https://wa.me/5562998221110?text=Olá! Gostaria de agendar uma consulta.', '_blank')}
             >
               Agendar Consulta
             </Button>
           </div>
         </div>
-      </div>
-
-      {/* Indicadores de Vídeo */}
-      <div className="absolute bottom-8 right-8 z-20 flex gap-2">
-        {videos.map((_, index) => (
-          <div
-            key={index}
-            className={`w-2 h-2 rounded-full transition-all duration-300 cursor-pointer ${
-              index === currentVideoIndex ? 'bg-cor-principal' : 'bg-white/50'
-            }`}
-            onClick={() => setCurrentVideoIndex(index)}
-          />
-        ))}
       </div>
     </section>
   );
