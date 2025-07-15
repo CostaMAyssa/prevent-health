@@ -1,7 +1,6 @@
 
 import { Button } from "@/components/ui/button";
 import { useRef } from "react";
-import heroVideo from "../lib/videos/WhatsApp Video 2025-07-14 at 19.49.53.mp4";
 
 export const HeroSection = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -17,7 +16,7 @@ export const HeroSection = () => {
         playsInline
         className="absolute inset-0 w-full h-full object-cover z-0"
       >
-        <source src={heroVideo} type="video/mp4" />
+        <source src="/videos/WhatsApp Video 2025-07-14 at 19.49.53.mp4" type="video/mp4" />
         Seu navegador não suporta a tag de vídeo.
       </video>
 

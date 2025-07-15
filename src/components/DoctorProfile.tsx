@@ -39,7 +39,7 @@ export const DoctorProfile = () => {
         aria-hidden="true"
         className="absolute inset-0 z-0 pointer-events-none"
         style={{
-          backgroundImage: "url('/src/lib/textures/sand.png')",
+          backgroundImage: "url('/textures/sand.svg')",
           opacity: 0.18,
           backgroundRepeat: 'repeat',
           backgroundSize: '400px 400px',

@@ -1,0 +1,41 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Padrão de grãos de areia -->
+    <pattern id="sandTexture" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect width="20" height="20" fill="#F5DEB3"/>
+      <circle cx="3" cy="5" r="0.5" fill="#DEB887" opacity="0.6"/>
+      <circle cx="12" cy="3" r="0.7" fill="#D2B48C" opacity="0.4"/>
+      <circle cx="17" cy="9" r="0.4" fill="#DDBF94" opacity="0.5"/>
+      <circle cx="8" cy="15" r="0.6" fill="#E6D7C3" opacity="0.3"/>
+      <circle cx="15" cy="17" r="0.5" fill="#D2B48C" opacity="0.7"/>
+      <circle cx="5" cy="11" r="0.3" fill="#DEB887" opacity="0.5"/>
+      <circle cx="18" cy="15" r="0.4" fill="#DDBF94" opacity="0.4"/>
+      <circle cx="2" cy="18" r="0.5" fill="#E6D7C3" opacity="0.6"/>
+      <circle cx="10" cy="7" r="0.4" fill="#D2B48C" opacity="0.5"/>
+      <circle cx="6" cy="1" r="0.3" fill="#DEB887" opacity="0.4"/>
+    </pattern>
+  </defs>
+  
+  <!-- Fundo base -->
+  <rect width="400" height="400" fill="url(#sandTexture)"/>
+  
+  <!-- Camada adicional de textura -->
+  <g opacity="0.3">
+    <circle cx="50" cy="80" r="1" fill="#D2B48C"/>
+    <circle cx="150" cy="120" r="0.8" fill="#DEB887"/>
+    <circle cx="250" cy="160" r="1.2" fill="#DDBF94"/>
+    <circle cx="350" cy="200" r="0.9" fill="#E6D7C3"/>
+    <circle cx="100" cy="240" r="1.1" fill="#D2B48C"/>
+    <circle cx="200" cy="280" r="0.7" fill="#DEB887"/>
+    <circle cx="300" cy="320" r="1" fill="#DDBF94"/>
+    <circle cx="75" cy="360" r="0.8" fill="#E6D7C3"/>
+    <circle cx="175" cy="40" r="1.3" fill="#D2B48C"/>
+    <circle cx="275" cy="80" r="0.9" fill="#DEB887"/>
+    <circle cx="375" cy="120" r="1.1" fill="#DDBF94"/>
+    <circle cx="25" cy="160" r="0.6" fill="#E6D7C3"/>
+    <circle cx="125" cy="200" r="1" fill="#D2B48C"/>
+    <circle cx="225" cy="240" r="0.8" fill="#DEB887"/>
+    <circle cx="325" cy="280" r="1.2" fill="#DDBF94"/>
+    <circle cx="60" cy="320" r="0.7" fill="#E6D7C3"/>
+  </g>
+</svg> 
