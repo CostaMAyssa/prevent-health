@@ -32,9 +32,22 @@ export const EmotionalFloatingBalloon = () => {
 
   // Função para tocar som de notificação
   const playNotificationSound = () => {
+    // Só tocar som se o usuário já interagiu com a página
+    // Vamos usar um indicador de que o usuário já clicou em algo
+    const hasUserInteracted = sessionStorage.getItem('userInteracted');
+    
+    if (!hasUserInteracted) {
+      return; // Não tocar som se o usuário ainda não interagiu
+    }
+    
     try {
       // Criar um contexto de áudio
       const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+      
+      // Verificar se o contexto está suspenso e resumir se necessário
+      if (audioContext.state === 'suspended') {
+        audioContext.resume();
+      }
       
       // Criar um som suave e agradável usando oscilador
       const oscillator = audioContext.createOscillator();
@@ -64,7 +77,21 @@ export const EmotionalFloatingBalloon = () => {
     }
   };
 
+  // Marcar que o usuário interagiu quando clicar em qualquer botão
+  const markUserInteraction = () => {
+    sessionStorage.setItem('userInteracted', 'true');
+  };
+
   useEffect(() => {
+    // Adicionar listeners para marcar interação do usuário
+    const handleUserInteraction = () => {
+      markUserInteraction();
+    };
+
+    // Adicionar listeners para cliques e toques
+    document.addEventListener('click', handleUserInteraction, { once: true });
+    document.addEventListener('touchstart', handleUserInteraction, { once: true });
+
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       const windowHeight = window.innerHeight;
@@ -85,7 +112,11 @@ export const EmotionalFloatingBalloon = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('click', handleUserInteraction);
+      document.removeEventListener('touchstart', handleUserInteraction);
+    };
   }, [isVisible, hasBeenShown]);
 
   const handleClose = () => {
