@@ -23,7 +23,7 @@ export const ServicePresentation = () => {
     {
       icon: Activity,
       title: "Biorressonância",
-      description: "Análise e monitoramento de desequilíbrios",
+      description: "Análise e monitoramento de desequilíbrios (online e presencial)",
       tooltip: "Com o desenvolvimento da tecnologia, tornou-se possível a análise e monitoramento eletrônico dos desequilíbrios do nosso corpo. A biorressonância foi criada através da junção do conhecimento da acupuntura e a mensuração precisa de ondas eletromagnéticas, permitindo assim a identificação de alterações biofísicas e bioquímicas do organismo. A avaliação por biorressonância utiliza tanto a frequência eletromagnética do corpo e as frequências únicas e individuais de cada órgão para fazer seu exame. Isso é possível porque se sabe que toda matéria tem sua própria frequência vibracional. Quando se insere outros fatores, como emoções, parasitas, pensamentos, metais pesados, sons, radiações, toxinas o organismo pode entrar em desequilíbrio e, em consequência, ocasionar o aparecimento de doenças. Com a biorressonância é possível a identificação de inflamações, alergias alimentares, parasitas, metais pesados, desequilíbrios de nutrientes e órgãos. O procedimento da biorressonância vem sendo utilizado há mais de 20 anos no mundo todo, totalmente seguro e eficiente. É uma abordagem integrativa que visa conceder alívio aos pacientes da maneira mais rápida e eficaz, podendo ser realizada presencialmente e a distância.",
       delay: "0.4s"
     },
@@ -37,7 +37,7 @@ export const ServicePresentation = () => {
     {
       icon: Brain,
       title: "Psych-K",
-      description: "Reprogramação de crenças subconscientes",
+      description: "Reprogramação de crenças subconscientes (online e presencial)",
       tooltip: "PSYCH-K® é um método simples e direto para identificar e mudar crenças subconscientes auto limitantes, que perpetuam os velhos hábitos de pensamento e comportamento que você gostaria de mudar. Uma poderosa metodologia para atingir as metas e mudanças que não são passíveis apenas com a força de vontade. Estudos em neurociência indicam que 95% de nossa consciência é, na verdade, subconsciente. É a mente subconsciente que guarda nossas atitudes, valores e crenças. É um processo simples que ajuda você a se comunicar com seu subconsciente, onde quase todos os comportamentos humanos – construtivos e destrutivos – se originam, para que você possa mudar as crenças que limitam a sua autoestima, seus relacionamentos, o desempenho no trabalho e até mesmo sua saúde física! EM QUE CASOS O PSYCH-K® PODE AJUDAR? Em casos de desequilibrios como: auto-estima baixa, dificuldades de prosperar, dificuldades para se relacionar socialmente e amorosamente, sentimento de inferioridade, dificuldade de dirigir, dificuldade de se aceitar, sentimento de culpa, pessimismo, compulsões alimentares, tiques nervosos, timidez, dificuldade de falar em público, dificuldade de cobrar por seus serviços, dificuldade de aprendizado, alergias, compulsões, vícios(roer unhas, cigarro, drogas, chocolate), traumas por morte, separação e traumas em geral, fobias, sindrome do pânico, ansiedade, insônia, depressão, dores, doenças entre outros. “¨Nas profundezas do seu subconsciente, à espera de se expandir e de se expressar, há uma sabedoria infinita, há um poder infinito, há um estoque ilimitado de tudo o que é necessário para uma vida perfeita. Comece agora a descobrir essas potencialidades das profundezas da sua mente e elas tomarão forma no mundo exterior”",
       delay: "0.8s"
     },
@@ -97,19 +97,22 @@ export const ServicePresentation = () => {
                           {/* Icon */}
                           <div className="relative w-16 h-16 bg-gradient-to-br from-cor-principal to-cor-botao-hover rounded-full flex items-center justify-center mx-auto mb-4 shadow-md group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-110">
                             <therapy.icon className="h-8 w-8 text-white" />
-                </div>
+                          </div>
                           {/* Content */}
                           <div className="relative z-10">
                             <h3 className="text-lg font-semibold text-cor-texto mb-3 group-hover:text-cor-principal transition-colors duration-300">
                               {therapy.title}
-                  </h3>
+                            </h3>
+                            {['Psych-K', 'Biorressonância'].includes(therapy.title) && (
+                              <div className="font-bold text-cor-principal mb-1">online e presencial</div>
+                            )}
                             <p className="text-cor-texto/70 text-sm leading-relaxed mb-2">
                               {therapy.description}
                             </p>
                             <p className="text-xs text-cor-principal/60 italic">
                               Clique para saber mais
-                  </p>
-                </div>
+                            </p>
+                          </div>
                           {/* Floating particles effect */}
                           <div className="absolute top-4 right-4 w-2 h-2 bg-cor-principal/30 rounded-full animate-ping"></div>
                           <div className="absolute bottom-4 left-4 w-1 h-1 bg-cor-destaque/40 rounded-full animate-pulse"></div>

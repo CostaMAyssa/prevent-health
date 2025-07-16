@@ -27,7 +27,7 @@ export const HeroSection = () => {
         <div className="space-y-8">
           {/* Frase de destaque */}
           <div className="space-y-6">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light leading-tight" style={{ paddingTop: 20 }}>
               <span className="text-white">
                 "Seu corpo fala, sua mente sente —"
               </span>
