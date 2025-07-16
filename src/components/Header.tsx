@@ -11,7 +11,7 @@ export const Header = () => {
     { label: "Início", href: "#hero" },
     { label: "Dra. Daniela", href: "#dra-daniela" },
     { label: "Terapias", href: "#services" },
-    { label: "Benefícios", href: "#benefits" },
+    { label: "Depoimentos", href: "#depoimentos" },
     { label: "Pilares", href: "#pillars" },
     { label: "Atendimento", href: "#process" },
     { label: "Localização", href: "#location" },

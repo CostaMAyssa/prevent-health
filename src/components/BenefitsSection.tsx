@@ -71,12 +71,12 @@ export const BenefitsSection = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-cor-texto mb-10 text-center">
           Depoimentos
         </h2>
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           <Carousel>
             <CarouselContent>
               {depoimentos.map((dep, idx) => (
                 <CarouselItem key={idx}>
-                  <div className="bg-white/80 rounded-2xl shadow-lg p-8 flex flex-col min-h-[260px]">
+                  <div className="bg-white/80 rounded-2xl shadow-lg p-8 flex flex-col min-h-[260px] border-4 border-cor-principal">
                     <p className="text-cor-texto/90 text-base mb-4">{dep.texto}</p>
                     <span className="font-semibold text-cor-principal mt-auto">{dep.nome}</span>
                   </div>
