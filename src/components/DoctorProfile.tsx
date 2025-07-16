@@ -55,7 +55,6 @@ export const DoctorProfile = () => {
                 Dra. Daniela
                 <span className="text-cor-principal"> – Saúde Integral</span>
               </h2>
-              <p className="text-sm text-cor-texto">CREFITO 17563F</p>
               <p className="text-lg text-cor-texto leading-relaxed">
                 Formada em Fisioterapia pela Faculdade de Educação Física de Lins-SP (1994), 
                 com especializações internacionais em Microfisioterapia, RPG, Medicina Funcional Integrativa, 

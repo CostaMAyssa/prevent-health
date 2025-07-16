@@ -3,6 +3,7 @@ import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
 import { ServicePresentation } from "@/components/ServicePresentation";
+import ClinicVideoSection from "@/components/ClinicVideoSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { PillarsSection } from "@/components/PillarsSection";
 import { ProcessSteps } from "@/components/ProcessSteps";
@@ -17,6 +18,7 @@ const Index = () => {
       <HeroSection />
       <DoctorProfile />
       <ServicePresentation />
+      <ClinicVideoSection />
       <BenefitsSection />
       <PillarsSection />
       <ProcessSteps />
