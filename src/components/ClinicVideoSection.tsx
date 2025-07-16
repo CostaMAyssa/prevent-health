@@ -12,10 +12,16 @@ const ClinicVideoSection = () => (
         </p>
         <div className="relative max-w-4xl mx-auto">
           <div className="relative bg-white rounded-3xl p-8 shadow-2xl">
-            <div className="aspect-video bg-gradient-to-br from-cor-principal/10 to-cor-destaque/10 rounded-2xl flex items-center justify-center">
-              <div className="w-20 h-20 bg-cor-principal rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 cursor-pointer">
-                <Play className="h-8 w-8 text-white ml-1" />
-              </div>
+            <div className="aspect-video bg-gradient-to-br from-cor-principal/10 to-cor-destaque/10 rounded-2xl overflow-hidden">
+              {/* Substitua VIDEO_ID pelo ID do seu vídeo do YouTube */}
+              <iframe
+                className="w-full h-full rounded-2xl"
+                src="https://www.youtube.com/embed/VIDEO_ID?rel=0&modestbranding=1&showinfo=0"
+                title="Vídeo da Clínica Prevent Health"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             </div>
             <div className="mt-6">
               <h3 className="text-xl font-semibold text-cor-texto mb-2">
