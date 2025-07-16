@@ -23,7 +23,7 @@ export const HeroSection = () => {
       {/* Removido overlay escuro para melhor legibilidade */}
 
       {/* Conteúdo alinhado à direita, centralizado verticalmente */}
-      <div className="relative z-20 px-8 md:px-0 md:pr-16 lg:pr-20 xl:pr-24 max-w-2xl w-full flex flex-col justify-center h-full">
+      <div className="relative z-20 px-8 md:px-0 md:pr-16 lg:pr-20 xl:pr-24 max-w-2xl w-full flex flex-col justify-center h-full" style={{ paddingTop: '80px' }}>
         <div className="space-y-8">
           {/* Frase de destaque */}
           <div className="space-y-6">
