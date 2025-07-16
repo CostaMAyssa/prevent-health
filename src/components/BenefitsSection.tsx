@@ -71,12 +71,14 @@ export const BenefitsSection = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-cor-texto mb-10 text-center">
           Depoimentos
         </h2>
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto relative">
+          {/* Efeito decorativo por fora do card */}
+          <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-[420px] h-[420px] bg-gradient-to-br from-cor-principal/10 via-cor-destaque/10 to-white rounded-full blur-2xl z-0"></div>
           <Carousel>
             <CarouselContent>
               {depoimentos.map((dep, idx) => (
                 <CarouselItem key={idx}>
-                  <div className="bg-white/80 rounded-2xl shadow-lg p-8 flex flex-col min-h-[260px] border-4 border-cor-principal">
+                  <div className="bg-gradient-to-br from-white/90 to-cor-fundo/80 rounded-2xl p-8 flex flex-col min-h-[260px] border-4 border-cor-principal outline outline-2 outline-cor-destaque transition-all duration-300 hover:outline-4 hover:outline-cor-principal/60 hover:border-cor-destaque/80">
                     <p className="text-cor-texto/90 text-base mb-4">{dep.texto}</p>
                     <span className="font-semibold text-cor-principal mt-auto">{dep.nome}</span>
                   </div>
