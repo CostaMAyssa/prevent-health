@@ -11,16 +11,6 @@ import {
 export const DoctorProfile = () => {
   const qualifications = [
     {
-      icon: GraduationCap,
-      title: "Formação Acadêmica",
-      description: "Fisioterapia pela Faculdade de Educação Física de Lins-SP (1994)"
-    },
-    {
-      icon: Award,
-      title: "Especializações Internacionais",
-      description: "Microfisioterapia, RPG, Podoposturologia, Acupuntura, Terapia Ortobiomolecular"
-    },
-    {
       icon: Heart,
       title: "Experiência Clínica",
       description: "25 anos dedicados à saúde integral e cuidado personalizado"
@@ -63,12 +53,12 @@ export const DoctorProfile = () => {
             <div className="space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold text-cor-texto">
                 Dra. Daniela
-                <span className="text-cor-principal"> – Fisioterapeuta</span>
+                <span className="text-cor-principal"> – Saúde Integral</span>
               </h2>
               <p className="text-sm text-cor-texto">CREFITO 17563F</p>
               <p className="text-lg text-cor-texto leading-relaxed">
                 Formada em Fisioterapia pela Faculdade de Educação Física de Lins-SP (1994), 
-                com especializações internacionais em Microfisioterapia, RPG, Podoposturologia, 
+                com especializações internacionais em Microfisioterapia, RPG, Medicina Funcional Integrativa, 
                 Acupuntura, Terapia Ortobiomolecular, Psych-K e outras.
               </p>
               <p className="text-lg text-cor-texto leading-relaxed">
@@ -77,7 +67,7 @@ export const DoctorProfile = () => {
               </p>
               <p className="text-lg text-cor-texto leading-relaxed">
                 Mãe de dois filhos, Daniela equilibra a maternidade e a profissão com amor, 
-                fé e compromisso, atendendo seus pacientes em seu consultório em Goiânia desde 2012.
+                fé e compromisso, atendendo seus pacientes em seu consultório em Goiânia desde 2000.
               </p>
             </div>
 
