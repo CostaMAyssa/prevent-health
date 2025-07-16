@@ -10,6 +10,7 @@ import { ProcessSteps } from "@/components/ProcessSteps";
 import { DoctorProfile } from "@/components/DoctorProfile";
 import { LocationMap } from "@/components/LocationMap";
 import { Footer } from "@/components/Footer";
+import { EmotionalFloatingBalloon } from "@/components/EmotionalFloatingBalloon";
 
 const Index = () => {
   return (
@@ -25,6 +26,7 @@ const Index = () => {
       <LocationMap />
       <Footer />
       <WhatsAppFloat />
+      <EmotionalFloatingBalloon />
     </div>
   );
 };
