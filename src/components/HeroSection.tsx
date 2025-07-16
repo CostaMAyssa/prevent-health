@@ -6,7 +6,7 @@ export const HeroSection = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   return (
-    <section id="hero" className="relative h-screen flex items-center justify-center text-center md:items-start md:justify-end md:text-left pt-24 md:pt-64">
+    <section id="hero" className="relative h-screen flex items-center justify-end text-left">
       {/* Vídeo de Fundo */}
       <video 
         ref={videoRef}
@@ -20,20 +20,21 @@ export const HeroSection = () => {
         Seu navegador não suporta a tag de vídeo.
       </video>
 
-      {/* Overlay escuro para melhor legibilidade */}
-      <div className="absolute inset-0 bg-black/50 z-10"></div>
+      {/* Removido overlay escuro para melhor legibilidade */}
 
       {/* Conteúdo alinhado à direita, centralizado verticalmente */}
       <div className="relative z-20 px-8 md:px-0 md:pr-16 lg:pr-20 xl:pr-24 max-w-2xl w-full flex flex-col justify-center h-full">
         <div className="space-y-8">
           {/* Frase de destaque */}
           <div className="space-y-6">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light text-white leading-tight">
-              "Seu corpo fala, sua mente sente —{" "}
+            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light leading-tight">
+              <span className="text-white">
+                "Seu corpo fala, sua mente sente —"
+              </span>
               <br className="hidden md:block" />
               <span className="text-cor-principal font-normal">
-                e aqui, nós ouvimos tudo isso.
-              </span>"
+                e aqui, nós ouvimos tudo isso."
+              </span>
             </h1>
           </div>
 
@@ -42,13 +43,13 @@ export const HeroSection = () => {
             <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-cor-principal">
               PREVENT & HEALTH
             </h2>
-            <p className="text-xl md:text-2xl lg:text-3xl text-white/90 font-light">
+            <p className="text-xl md:text-2xl lg:text-3xl font-light text-white text-center">
               Terapias Integrativas
             </p>
           </div>
 
           {/* Botão de agendamento */}
-          <div className="pt-8">
+          <div className="pt-3">
             <Button 
               className="bg-[#25D366] hover:bg-[#1FB157] text-white px-8 py-4 text-lg font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               onClick={() => window.open('https://wa.me/5562998221110?text=Olá! Gostaria de agendar uma consulta.', '_blank')}
