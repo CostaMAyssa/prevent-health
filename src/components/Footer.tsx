@@ -89,7 +89,7 @@ export const Footer = () => {
             <div className="space-y-3 text-gray-300">
               <p>Rua João de Abreu, nº 116<br />Ed. Euro Working Concept<br />Sala 1002-B, Setor Oeste<br />Goiânia-GO</p>
               <p>(62) 3215-2603<br />(62) 99822-1110</p>
-              <p>contato@danielafiorim.com.br</p>
+              <p>preventhealth7@gmail.com</p>
             </div>
             <Button 
               className="mt-6 bg-[#25D366] hover:bg-[#1FB157] text-white px-6 py-3 rounded-full shadow-elegant hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-medium"

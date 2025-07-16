@@ -33,7 +33,7 @@ export const LocationMap = () => {
     {
       icon: Mail,
       title: "E-mail",
-      info: "contato@danielafiorim.com.br",
+      info: "preventhealth7@gmail.com",
       action: "Enviar e-mail"
     }
   ];
@@ -77,7 +77,7 @@ export const LocationMap = () => {
                             if (item.title === "Telefones") {
                               window.open('tel:+5562998221110', '_blank');
                             } else if (item.title === "E-mail") {
-                              window.open('mailto:contato@danielafiorim.com.br', '_blank');
+                              window.open('mailto:preventhealth7@gmail.com', '_blank');
                             } else if (item.title === "Endereço") {
                               window.open(mapsUrl, '_blank');
                             }
