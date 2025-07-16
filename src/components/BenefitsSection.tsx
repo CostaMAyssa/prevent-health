@@ -13,208 +13,82 @@ import {
   ChevronRight,
   Sparkles
 } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext
+} from "@/components/ui/carousel";
 
 export const BenefitsSection = () => {
-  const [visibleCards, setVisibleCards] = useState(0);
-  const [hasStarted, setHasStarted] = useState(false);
-
-  const benefits = [
+  const depoimentos = [
     {
-      icon: TrendingUp,
-      title: "Melhora da qualidade de vida",
-      description: "Bem-estar físico, emocional e espiritual através de terapias integrativas",
-      color: "bg-blue-50 border-blue-200",
-      iconColor: "text-blue-600"
+      nome: "Mara Helene",
+      texto: "Tenho 53 anos e descobri que tinha miosite (fibromialgia) algum tempo atrás. Fiz tratamento alopático, mas o resultado foi decepcionante. Ao ler uma reportagem na internet sobre microfisioterapia me pareceu uma boa opção de tratamento. A dra. Daniela aplicou a terapia e já na primeira sessão as dores e a dificuldade de mobilidade foram embora. Muitas atividades que então não poderia fazer, hoje faço sem nenhum problema, exercícios físicos na academia e atividades domésticas por exemplo. Grata por todo cuidado e carinho que sempre tiveram comigo!"
     },
     {
-      icon: Heart,
-      title: "Alívio efetivo de dores",
-      description: "Tratamento de dores crônicas e agudas com técnicas especializadas",
-      color: "bg-red-50 border-red-200",
-      iconColor: "text-red-600"
+      nome: "Patrícia Datilio",
+      texto: "Todas as vezes que vou à clínica da Dra Daniela Fiorim saio feliz e motivada. É notável o carinho, preparo e atenção dispensados para que todos se sintam cuidados física e emocionalmente. O que torna os resultados dos tratamentos mais rápidos e eficazes."
     },
     {
-      icon: Shield,
-      title: "Fortalecimento imunológico",
-      description: "Estimula o sistema imunológico e previne doenças naturalmente",
-      color: "bg-green-50 border-green-200",
-      iconColor: "text-green-600"
+      nome: "Deborah de Brito",
+      texto: "Cheguei na clínica da Dra Daniela com estado físico muito debilitado proveniente de uma fase sedentária, com tremor nos braços e mãos, dor nos joelhos e coluna lombar, com a pisada errada e musculatura enfraquecida. Estou muito feliz com as mudanças proporcionadas pelos tratamentos de ozonioterapia e ortobiomolecular, além dos exercícios fisioterápicos. Só tenha a agradecer à Dra Daniela pelo profissionalismo e dedicação. Gratidão!"
     },
     {
-      icon: Brain,
-      title: "Equilíbrio emocional",
-      description: "Redução do estresse e promoção do bem-estar mental e emocional",
-      color: "bg-purple-50 border-purple-200",
-      iconColor: "text-purple-600"
+      nome: "Terezinha Dyas",
+      texto: "Sabe quando Deus envia pessoas ou anjos pra dar só uma espiadinha em nossas vidas? Então num momento em que eu estava no auge da angústia Ele me disse baixinho: – Vai a uma consulta com a Dra Daniela Fiorim. Fui e não mais a deixei. Obrigada amiga, benção de Deus!"
     },
     {
-      icon: Activity,
-      title: "Evidências científicas",
-      description: "Tratamentos baseados em pesquisas científicas e abordagem holística",
-      color: "bg-yellow-50 border-yellow-200",
-      iconColor: "text-yellow-600"
+      nome: "Carmem Damaceno",
+      texto: "A microfisioterapia é um tratamento que melhora seu corpo e mente, super recomendo, é uma excelente profissional."
     },
     {
-      icon: Users,
-      title: "Cuidado personalizado",
-      description: "Atendimento próximo, respeitoso e individualizado para cada paciente",
-      color: "bg-cor-principal/10 border-cor-principal/20",
-      iconColor: "text-cor-principal"
+      nome: "Flávia Palazzo de Rezende",
+      texto: "Encantada com o tratamento que meu filho fez para se livrar das fraldas, bastou uma sessão de Microfisioterapia e tudo resolvido. Dra Daniela é um amor de pessoa."
+    },
+    {
+      nome: "Juliana Bortoletto Blanco Correa",
+      texto: "Conheço a Daniela há 20 anos, tenho 46 anos, sou fisioterapeuta e atuo na área de palmilhas posturais. Fizemos um tratamento de saúde integral alinhando a microfisioterapia, acupuntura e medicina quântica devido à uma inflamação muscular no quadril que me incomodava com muitas dores há mais de um ano. Foram 5 sessões, até a terceira sessão ainda sentia um pouco de dor, mas ao final do tratamento fiquei totalmente livre da inflamação e, principalmente, das dores e restrições de movimentos, podendo retomar a prática de exercícios físicos. Mas o mais interessante desse tratamento é que pude superar alguns entraves emocionais. A saúde integral realmente trabalha o ser como um todo, alinhando as emoções (mente) com o físico (corpo)."
+    },
+    {
+      nome: "Juliano Castro",
+      texto: "Meu filho de 8 anos foi diagnosticado com bronquite antes dos 2 anos de idade. Nesse período fez uso de corticóides diariamente, mas alterações no clima, excesso de atividade física e situações de ansiedade ainda assim provocavam as crises. Normalmente eram moderadas, mas aconteceram algumas bem fortes. Este ano, após uma broncopneumonia resolvi procurar um tratamento alternativo. Iniciamos a microfisioterapia com a Dra. Daniela. Achei muito boa a forma como lidou com ele e nos explicou tudo como funcionava. Confesso que estava bem cético com o tratamento. Mas após essa sessão ele não teve mais nenhuma crise. Ele já fez um retorno com a microfisioterapia e posso dizer que seu organismo (sono, apetite, evacuação, imunidade) está muito melhor."
+    },
+    {
+      nome: "Pamela Duarte",
+      texto: "Iniciei meu tratamento de RPG com a Dra. Daniela Fiorim para melhorar a postura e trazer mais conforto no dia-a-dia, até porque tive escoliose na adolescência então sempre precisei de exercícios posturais. Agora, aos 28 anos, durante o tratamento descobrimos duas hérnias de disco na coluna lombar. Então, após tratar a inflamação, acrescentamos a microfisioterapia e a terapia por informação biofísica (florais quânticos). Já faz mais de um ano e nunca mais senti dor na coluna. Minha postura está 100% melhor e consegui retornar à prática de exercícios de impacto."
+    },
+    {
+      nome: "Elizângela Ferreira",
+      texto: "Quero relatar o quanto fui abençoada por ter conhecido a Dra Daniela através da indicação de uma amiga. Tive câncer de mama há três anos atrás e passei por três cirurgias, com problemas de cicatrização e queloide. Em consequência disso, tive muita queda de cabelo, unhas fracas, anemia, fraqueza e desânimo. Um mês antes da minha última cirurgia, começamos o tratamento de ozonioterapia e desintoxicação. Os resultados superaram minhas expectativas: cessou a queda de cabelo, fortaleceu as unhas, a cicatrização está excelente e sem queloides, não estou mais com anemia e nem sentindo dores na coluna. A Dra Daniela e sua equipe são anjos de Deus enviados para cuidar de verdade da nossa saúde. Essa foi a melhor indicação que recebi na vida e tenho o prazer de repassar para outras pessoas. Grata por todo cuidado e carinho que sempre tiveram comigo!"
     }
   ];
 
-  const startDiscovery = () => {
-    setHasStarted(true);
-    setVisibleCards(1);
-  };
-
-  const showNextBenefit = () => {
-    if (visibleCards < benefits.length) {
-      setVisibleCards(visibleCards + 1);
-    }
-  };
-
-  const showAllBenefits = () => {
-    setVisibleCards(benefits.length);
-  };
-
   return (
-    <section id="benefits" className="py-20 bg-gradient-to-br from-white to-cor-fundo">
+    <section id="depoimentos" className="py-20 bg-gradient-to-br from-white to-cor-fundo">
       <div className="container mx-auto px-4">
-        
-        {/* Initial Question */}
-        {!hasStarted && (
-          <div className="text-center max-w-4xl mx-auto">
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-cor-principal/5 to-cor-destaque/5 rounded-3xl"></div>
-              <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-12 shadow-xl border border-cor-principal/10">
-                <div className="flex items-center justify-center mb-8">
-                  <div className="w-20 h-20 bg-gradient-to-br from-cor-principal to-cor-botao-hover rounded-full flex items-center justify-center shadow-lg">
-                    <Sparkles className="h-10 w-10 text-white" />
+        <h2 className="text-3xl md:text-4xl font-bold text-cor-texto mb-10 text-center">
+          Depoimentos
+        </h2>
+        <div className="max-w-2xl mx-auto">
+          <Carousel>
+            <CarouselContent>
+              {depoimentos.map((dep, idx) => (
+                <CarouselItem key={idx}>
+                  <div className="bg-white/80 rounded-2xl shadow-lg p-8 flex flex-col min-h-[260px]">
+                    <p className="text-cor-texto/90 text-base mb-4">{dep.texto}</p>
+                    <span className="font-semibold text-cor-principal mt-auto">{dep.nome}</span>
                   </div>
-                </div>
-                
-                <h2 className="text-3xl md:text-4xl font-bold text-cor-texto mb-6 leading-tight">
-                  Você sabe os{" "}
-                  <span className="text-cor-principal">Benefícios da Fisioterapia Integrativa?</span>
-                </h2>
-                
-                <p className="text-xl text-cor-texto/80 mb-8 leading-relaxed">
-                  Descubra como nossa abordagem pode transformar sua saúde e bem-estar de forma personalizada
-                </p>
-                
-                <Button 
-                  size="lg"
-                  onClick={startDiscovery}
-                  className="btn-elegant text-white px-8 py-4 text-lg font-semibold rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
-                >
-                  <Sparkles className="h-5 w-5 mr-2" />
-                  Descobrir os benefícios
-                  <ChevronRight className="h-5 w-5 ml-2" />
-                </Button>
-              </div>
-              
-              {/* Floating decorative elements */}
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-cor-destaque/20 rounded-full animate-float"></div>
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-cor-principal/20 rounded-full animate-float" style={{animationDelay: '1s'}}></div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="flex justify-center gap-4 mt-6">
+              <CarouselPrevious />
+              <CarouselNext />
             </div>
-          </div>
-        )}
-
-        {/* Progressive Benefits Discovery */}
-        {hasStarted && (
-          <div className="space-y-12">
-            <div className="text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-cor-texto mb-6">
-            Benefícios da{" "}
-                <span className="text-cor-principal">Fisioterapia Integrativa</span>
-          </h2>
-              <p className="text-lg text-cor-texto/80 max-w-3xl mx-auto">
-                Descubra as vantagens de uma abordagem integrativa para sua saúde
-          </p>
+          </Carousel>
         </div>
-
-            {/* Benefits Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.slice(0, visibleCards).map((benefit, index) => (
-            <Card 
-              key={index} 
-                  className="group bg-white/70 backdrop-blur-sm border-0 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 animate-fade-in-up"
-                  style={{
-                    animationDelay: `${index * 0.2}s`,
-                    animationDuration: `${3 + index * 0.5}s`
-                  }}
-                >
-                  <CardContent className="p-6 text-center relative overflow-hidden">
-                    {/* Animated background gradient */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-cor-principal/5 to-cor-destaque/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    
-                    {/* Icon */}
-                    <div className="relative w-16 h-16 bg-gradient-to-br from-cor-principal to-cor-botao-hover rounded-full flex items-center justify-center mx-auto mb-4 shadow-md group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-110">
-                      <benefit.icon className="h-8 w-8 text-white" />
-                </div>
-                    
-                    {/* Content */}
-                    <div className="relative z-10">
-                      <h3 className="text-lg font-semibold text-cor-texto mb-3 group-hover:text-cor-principal transition-colors duration-300">
-                  {benefit.title}
-                </h3>
-                      <p className="text-cor-texto/70 text-sm leading-relaxed">
-                  {benefit.description}
-                </p>
-                    </div>
-                    
-                    {/* Floating particles effect */}
-                    <div className="absolute top-4 right-4 w-2 h-2 bg-cor-principal/30 rounded-full animate-ping"></div>
-                    <div className="absolute bottom-4 left-4 w-1 h-1 bg-cor-destaque/40 rounded-full animate-pulse"></div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-            {/* Action Buttons */}
-            <div className="text-center space-y-4">
-              {visibleCards < benefits.length && (
-                <div className="space-x-4">
-                  <Button 
-                    onClick={showNextBenefit}
-                    className="bg-cor-principal hover:bg-cor-botao-hover text-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-                  >
-                    <ChevronRight className="h-4 w-4 mr-2" />
-                    Descobrir mais um benefício
-                  </Button>
-                  
-                  <Button 
-                    onClick={showAllBenefits}
-                    variant="outline"
-                    className="border-cor-principal text-cor-principal hover:bg-cor-principal hover:text-white px-6 py-3 rounded-full transition-all duration-300"
-                  >
-                    Ver todos os benefícios
-                  </Button>
-                </div>
-              )}
-              
-              {visibleCards === benefits.length && (
-                <div className="bg-cor-fundo/80 rounded-2xl p-8 backdrop-blur-sm">
-                  <h3 className="text-2xl font-bold text-cor-texto mb-4">
-                    Pronto para transformar sua saúde?
-                  </h3>
-                  <p className="text-cor-texto/70 mb-6">
-                    Agende uma consulta e descubra como a fisioterapia integrativa pode beneficiar você
-                  </p>
-                  <Button 
-                    size="lg"
-                    onClick={() => window.open('https://wa.me/5562998221110', '_blank')}
-                    className="bg-[#25D366] hover:bg-[#1FB157] text-white px-8 py-4 text-lg font-semibold rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
-                  >
-                    <Heart className="h-5 w-5 mr-2" />
-                    Agendar consulta pelo WhatsApp
-                  </Button>
-                </div>
-              )}
-            </div>
-          </div>
-        )}
       </div>
     </section>
   );

@@ -35,24 +35,26 @@ export const PillarsSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {pillars.map((pillar, index) => (
-            <Card 
-              key={index} 
-              className="group hover:shadow-xl transition-all duration-300 border border-cor-destaque/20 hover:border-cor-principal/30"
-            >
-              <CardContent className="p-6">
-                <div className="mb-4">
-                  <h3 className="text-xl font-semibold text-cor-texto mb-4 group-hover:text-cor-principal transition-colors">
-                    {pillar.title}
-                  </h3>
-                  <p className="text-cor-texto/70 leading-relaxed">
-                    {pillar.description}
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="flex justify-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-5xl w-full">
+            {pillars.map((pillar, index) => (
+              <Card 
+                key={index} 
+                className="group hover:shadow-xl transition-all duration-300 border border-cor-destaque/20 hover:border-cor-principal/30"
+              >
+                <CardContent className="p-6">
+                  <div className="mb-4">
+                    <h3 className="text-xl font-semibold text-cor-texto mb-4 group-hover:text-cor-principal transition-colors">
+                      {pillar.title}
+                    </h3>
+                    <p className="text-cor-texto/70 leading-relaxed">
+                      {pillar.description}
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
     </section>
