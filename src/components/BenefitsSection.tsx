@@ -205,7 +205,7 @@ export const BenefitsSection = () => {
                   <Button 
                     size="lg"
                     onClick={() => window.open('https://wa.me/5562998221110', '_blank')}
-                    className="btn-elegant text-white px-8 py-4 text-lg font-semibold rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
+                    className="bg-[#25D366] hover:bg-[#1FB157] text-white px-8 py-4 text-lg font-semibold rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
                   >
                     <Heart className="h-5 w-5 mr-2" />
                     Agendar consulta pelo WhatsApp
