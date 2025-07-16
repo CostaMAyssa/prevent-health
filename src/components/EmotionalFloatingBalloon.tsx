@@ -30,11 +30,44 @@ export const EmotionalFloatingBalloon = () => {
 
   const [currentMessage, setCurrentMessage] = useState(0);
 
+  // Função para tocar som de notificação
+  const playNotificationSound = () => {
+    try {
+      // Criar um contexto de áudio
+      const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+      
+      // Criar um som suave e agradável usando oscilador
+      const oscillator = audioContext.createOscillator();
+      const gainNode = audioContext.createGain();
+      
+      // Conectar oscilador ao gain e ao destino
+      oscillator.connect(gainNode);
+      gainNode.connect(audioContext.destination);
+      
+      // Configurar o som - frequências harmoniosas
+      oscillator.type = 'sine';
+      oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+      oscillator.frequency.exponentialRampToValueAtTime(600, audioContext.currentTime + 0.1);
+      oscillator.frequency.exponentialRampToValueAtTime(400, audioContext.currentTime + 0.3);
+      
+      // Configurar volume com fade in/out suave
+      gainNode.gain.setValueAtTime(0, audioContext.currentTime);
+      gainNode.gain.linearRampToValueAtTime(0.1, audioContext.currentTime + 0.05);
+      gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.4);
+      
+      // Tocar o som
+      oscillator.start(audioContext.currentTime);
+      oscillator.stop(audioContext.currentTime + 0.4);
+      
+    } catch (error) {
+      console.log('Áudio não disponível neste navegador');
+    }
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       const windowHeight = window.innerHeight;
-      const documentHeight = document.documentElement.scrollHeight;
       
       // Aparece após rolar 30% da página e não foi fechado ainda
       const shouldShow = (scrollPosition > windowHeight * 0.3) && !hasBeenShown;
@@ -43,6 +76,11 @@ export const EmotionalFloatingBalloon = () => {
         setIsVisible(true);
         // Rotaciona mensagem aleatoriamente
         setCurrentMessage(Math.floor(Math.random() * emotionalMessages.length));
+        
+        // Tocar som de notificação após um pequeno delay
+        setTimeout(() => {
+          playNotificationSound();
+        }, 500);
       }
     };
 
