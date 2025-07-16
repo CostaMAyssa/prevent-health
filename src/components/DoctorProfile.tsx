@@ -52,8 +52,7 @@ export const DoctorProfile = () => {
           <div className="space-y-8">
             <div className="space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold text-cor-texto">
-                Dra. Daniela
-                <span className="text-cor-principal"> – Saúde Integral</span>
+                Dra. Daniela – Saúde Integral
               </h2>
               <p className="text-lg text-cor-texto leading-relaxed">
                 Formada em Fisioterapia pela Faculdade de Educação Física de Lins-SP (1994), 

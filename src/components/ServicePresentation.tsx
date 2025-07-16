@@ -69,13 +69,12 @@ export const ServicePresentation = () => {
               {/* Therapies Title */}
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold text-cor-texto mb-6">
-                  Nossas{" "}
-                  <span className="text-cor-principal">Terapias Integrativas</span>
+                  Nossas Terapias Integrativas
                 </h2>
                 <p className="text-lg text-cor-texto max-w-3xl mx-auto mb-4">
                   Tratamentos especializados para cuidar de você de forma completa e personalizada
                 </p>
-                <p className="text-sm text-cor-texto/70 max-w-2xl mx-auto">
+                <p className="text-base md:text-lg font-semibold text-cor-texto/90 max-w-2xl mx-auto">
                   💡 <em>Passe o mouse sobre cada terapia para descobrir como ela pode ajudar você</em>
                 </p>
                   </div>
@@ -142,7 +141,7 @@ export const ServicePresentation = () => {
                 >
                   Agende sua consulta pelo WhatsApp
                 </Button>
-                <p className="text-cor-texto/70 mt-4">
+                <p className="text-cor-texto/70 mt-4 font-bold">
                   Transforme sua saúde com nosso cuidado integral e personalizado
                 </p>
               </div>

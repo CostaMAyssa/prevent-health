@@ -12,10 +12,6 @@ export const PillarsSection = () => {
       description: "Atendimento empático, acolhedor e respeitoso, onde cada paciente é tratado com dignidade e cuidado individualizado."
     },
     {
-      title: "Ciência e Espiritualidade",
-      description: "Combinação harmoniosa do conhecimento científico rigoroso com práticas integrativas comprovadas e abordagem espiritual."
-    },
-    {
       title: "Atualização Contínua",
       description: "Aperfeiçoamento constante através de especializações internacionais e estudos das mais avançadas técnicas terapêuticas."
     },
