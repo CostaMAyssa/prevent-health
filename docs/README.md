@@ -25,10 +25,9 @@ Para fazer deploy da aplicação, use o script automatizado:
 3. **AudioContext corrigido:** Só toca após interação do usuário
 4. **Vídeos limpos:** Apenas WhatsApp Video mantido
 5. **PDF configurado:** Download funcionando
-6. **YouTube iframe:** Configurado (aguardando ID)
+6. **YouTube iframe:** Configurado com vídeo correto (JzDbd-wOeJY)
 
-### 🔄 Pendentes
-1. **ID do vídeo YouTube:** Substituir `VIDEO_ID` no ClinicVideoSection
+### 🎉 Todas as mudanças foram implementadas com sucesso!
 
 ## 🛠️ Comandos Úteis
 
@@ -77,4 +76,4 @@ ssh root@31.97.85.30 "docker exec \$(docker ps -q --filter 'name=prevent-health'
 
 ---
 
-**Última atualização:** 16/07/2025 21:30 
+**Última atualização:** 16/07/2025 21:45 

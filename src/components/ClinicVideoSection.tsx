@@ -13,10 +13,9 @@ const ClinicVideoSection = () => (
         <div className="relative max-w-4xl mx-auto">
           <div className="relative bg-white rounded-3xl p-8 shadow-2xl">
             <div className="aspect-video bg-gradient-to-br from-cor-principal/10 to-cor-destaque/10 rounded-2xl overflow-hidden">
-              {/* Substitua VIDEO_ID pelo ID do seu vídeo do YouTube */}
               <iframe
                 className="w-full h-full rounded-2xl"
-                src="https://www.youtube.com/embed/VIDEO_ID?rel=0&modestbranding=1&showinfo=0"
+                src="https://www.youtube.com/embed/JzDbd-wOeJY?rel=0&modestbranding=1&showinfo=0"
                 title="Vídeo da Clínica Prevent Health"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

@@ -63,7 +63,8 @@ prevent-health-onepage-design/
 **Função:** Seção de vídeo da clínica
 **Modificações:**
 - Configurado para iframe do YouTube
-- Placeholder: `VIDEO_ID` (aguardando ID do vídeo)
+- **Vídeo:** https://www.youtube.com/watch?v=JzDbd-wOeJY
+- **ID:** JzDbd-wOeJY
 
 ## 📁 Arquivos de Mídia
 
@@ -222,11 +223,9 @@ docker exec $(docker ps -q --filter 'name=prevent-health') ls -la /usr/share/ngi
 3. **AudioContext corrigido:** Só toca após interação do usuário
 4. **Vídeos limpos:** Apenas WhatsApp Video mantido
 5. **PDF configurado:** Download funcionando
-6. **YouTube iframe:** Configurado (aguardando ID)
+6. **YouTube iframe:** Configurado com vídeo correto (JzDbd-wOeJY)
 
-### 🔄 Pendentes
-1. **ID do vídeo YouTube:** Substituir `VIDEO_ID` no ClinicVideoSection
-2. **Testes finais:** Verificar todas as funcionalidades
+### 🎉 Todas as mudanças foram implementadas com sucesso!
 
 ## 🛠️ Troubleshooting
 
@@ -257,5 +256,5 @@ docker exec $(docker ps -q --filter 'name=prevent-health') stat /usr/share/nginx
 
 ---
 
-**Última atualização:** 16/07/2025 21:30
+**Última atualização:** 16/07/2025 21:45
 **Versão:** 1.0.0 
