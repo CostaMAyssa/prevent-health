@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -155,22 +156,6 @@ export const BenefitsSection = () => {
               <CarouselNext className="static translate-y-0 bg-white hover:bg-cor-principal hover:text-white border-cor-principal/20 hover:border-cor-principal transition-all duration-300" />
             </div>
           </Carousel>
-        </div>
-
-        {/* Call to action */}
-        <div className="text-center mt-12">
-          <div className="bg-white/80 backdrop-blur-sm border border-cor-principal/20 rounded-2xl p-6 max-w-2xl mx-auto shadow-lg">
-            <h3 className="text-xl font-bold text-cor-texto mb-3">
-              Sua história de transformação começa aqui
-            </h3>
-            <p className="text-cor-texto/70 mb-4 text-sm">
-              Junte-se a centenas de pacientes que já descobriram o poder das terapias integrativas
-            </p>
-            <Button className="bg-cor-principal hover:bg-cor-botao-hover text-white px-6 py-2 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl">
-              Agendar Consulta
-              <ChevronRight className="w-4 h-4 ml-2" />
-            </Button>
-          </div>
         </div>
       </div>
     </section>
