@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -78,7 +77,7 @@ export const BenefitsSection = () => {
   ];
 
   return (
-    <section id="depoimentos" className="py-20 bg-gradient-to-br from-white via-cor-fundo/30 to-cor-fundo/60 relative overflow-hidden">
+    <section id="depoimentos" className="py-16 bg-gradient-to-br from-white via-cor-fundo/30 to-cor-fundo/60 relative overflow-hidden">
       {/* Elementos decorativos de fundo */}
       <div className="absolute top-20 left-10 w-32 h-32 bg-cor-principal/5 rounded-full blur-xl"></div>
       <div className="absolute bottom-20 right-10 w-40 h-40 bg-cor-destaque/5 rounded-full blur-xl"></div>
@@ -86,7 +85,7 @@ export const BenefitsSection = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header da seção */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-cor-principal/10 px-4 py-2 rounded-full mb-4">
             <Sparkles className="w-4 h-4 text-cor-principal" />
             <span className="text-cor-principal font-medium text-sm">Histórias de Transformação</span>
@@ -107,40 +106,40 @@ export const BenefitsSection = () => {
             <CarouselContent className="-ml-4">
               {depoimentos.map((dep, idx) => (
                 <CarouselItem key={idx} className="pl-4 md:basis-1/2 lg:basis-1/2">
-                  <Card className="h-full border-0 shadow-xl bg-gradient-to-br from-white/95 to-white/90 backdrop-blur-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group">
-                    <CardContent className="p-8 h-full flex flex-col">
+                  <Card className="h-[420px] border-0 shadow-xl bg-gradient-to-br from-white/95 to-white/90 backdrop-blur-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group">
+                    <CardContent className="p-6 h-full flex flex-col">
                       {/* Ícone de aspas */}
-                      <div className="mb-6">
-                        <div className="w-12 h-12 bg-gradient-to-br from-cor-principal to-cor-destaque rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                          <Quote className="w-6 h-6 text-white" />
+                      <div className="mb-4">
+                        <div className="w-10 h-10 bg-gradient-to-br from-cor-principal to-cor-destaque rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                          <Quote className="w-5 h-5 text-white" />
                         </div>
                       </div>
 
                       {/* Texto do depoimento */}
-                      <div className="flex-1 mb-6">
-                        <p className="text-cor-texto/90 text-base leading-relaxed italic">
+                      <div className="flex-1 mb-4">
+                        <p className="text-cor-texto/90 text-sm leading-relaxed italic line-clamp-6">
                           "{dep.texto}"
                         </p>
                       </div>
 
                       {/* Rating com estrelas */}
-                      <div className="flex items-center gap-1 mb-4">
+                      <div className="flex items-center gap-1 mb-3">
                         {[...Array(dep.rating)].map((_, i) => (
                           <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                         ))}
                       </div>
 
                       {/* Nome do paciente */}
-                      <div className="border-t border-cor-principal/20 pt-4">
+                      <div className="border-t border-cor-principal/20 pt-3">
                         <div className="flex items-center gap-3">
-                          <div className="w-10 h-10 bg-gradient-to-br from-cor-principal/20 to-cor-destaque/20 rounded-full flex items-center justify-center">
-                            <span className="text-cor-principal font-semibold text-sm">
+                          <div className="w-8 h-8 bg-gradient-to-br from-cor-principal/20 to-cor-destaque/20 rounded-full flex items-center justify-center">
+                            <span className="text-cor-principal font-semibold text-xs">
                               {dep.nome.split(' ').map(n => n[0]).join('').slice(0, 2)}
                             </span>
                           </div>
                           <div>
-                            <p className="font-semibold text-cor-texto">{dep.nome}</p>
-                            <p className="text-cor-texto/60 text-sm">Paciente</p>
+                            <p className="font-semibold text-cor-texto text-sm">{dep.nome}</p>
+                            <p className="text-cor-texto/60 text-xs">Paciente</p>
                           </div>
                         </div>
                       </div>
@@ -151,7 +150,7 @@ export const BenefitsSection = () => {
             </CarouselContent>
             
             {/* Navegação */}
-            <div className="flex justify-center gap-4 mt-8">
+            <div className="flex justify-center gap-4 mt-6">
               <CarouselPrevious className="static translate-y-0 bg-white hover:bg-cor-principal hover:text-white border-cor-principal/20 hover:border-cor-principal transition-all duration-300" />
               <CarouselNext className="static translate-y-0 bg-white hover:bg-cor-principal hover:text-white border-cor-principal/20 hover:border-cor-principal transition-all duration-300" />
             </div>
@@ -159,15 +158,15 @@ export const BenefitsSection = () => {
         </div>
 
         {/* Call to action */}
-        <div className="text-center mt-16">
-          <div className="bg-white/80 backdrop-blur-sm border border-cor-principal/20 rounded-2xl p-8 max-w-2xl mx-auto shadow-lg">
-            <h3 className="text-2xl font-bold text-cor-texto mb-4">
+        <div className="text-center mt-12">
+          <div className="bg-white/80 backdrop-blur-sm border border-cor-principal/20 rounded-2xl p-6 max-w-2xl mx-auto shadow-lg">
+            <h3 className="text-xl font-bold text-cor-texto mb-3">
               Sua história de transformação começa aqui
             </h3>
-            <p className="text-cor-texto/70 mb-6">
+            <p className="text-cor-texto/70 mb-4 text-sm">
               Junte-se a centenas de pacientes que já descobriram o poder das terapias integrativas
             </p>
-            <Button className="bg-cor-principal hover:bg-cor-botao-hover text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl">
+            <Button className="bg-cor-principal hover:bg-cor-botao-hover text-white px-6 py-2 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl">
               Agendar Consulta
               <ChevronRight className="w-4 h-4 ml-2" />
             </Button>
