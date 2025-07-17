@@ -49,7 +49,7 @@ export const Footer = () => {
               </div>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
-              Fisioterapia Integrativa e Terapias Complementares para seu bem-estar físico, emocional e espiritual.
+              Fisioterapia Integrativa e Terapias Complementares para seu bem-estar físico e emocional.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
