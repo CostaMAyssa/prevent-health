@@ -2,9 +2,13 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { Play, Heart, Leaf, Zap, Brain, Shield, Activity, Syringe } from "lucide-react";
+import { Play, Heart, Leaf, Zap, Brain, Shield, Activity, Syringe, X } from "lucide-react";
+import { useState } from "react";
 
 export const ServicePresentation = () => {
+  const [activeTherapy, setActiveTherapy] = useState<number | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const therapies = [
     {
       icon: Heart,
@@ -38,7 +42,7 @@ export const ServicePresentation = () => {
       icon: Brain,
       title: "Psych-K",
       description: "Reprogramação de crenças subconscientes (online e presencial)",
-      tooltip: "PSYCH-K® é um método simples e direto para identificar e mudar crenças subconscientes auto limitantes, que perpetuam os velhos hábitos de pensamento e comportamento que você gostaria de mudar. Uma poderosa metodologia para atingir as metas e mudanças que não são passíveis apenas com a força de vontade. Estudos em neurociência indicam que 95% de nossa consciência é, na verdade, subconsciente. É a mente subconsciente que guarda nossas atitudes, valores e crenças. É um processo simples que ajuda você a se comunicar com seu subconsciente, onde quase todos os comportamentos humanos – construtivos e destrutivos – se originam, para que você possa mudar as crenças que limitam a sua autoestima, seus relacionamentos, o desempenho no trabalho e até mesmo sua saúde física! EM QUE CASOS O PSYCH-K® PODE AJUDAR? Em casos de desequilibrios como: auto-estima baixa, dificuldades de prosperar, dificuldades para se relacionar socialmente e amorosamente, sentimento de inferioridade, dificuldade de dirigir, dificuldade de se aceitar, sentimento de culpa, pessimismo, compulsões alimentares, tiques nervosos, timidez, dificuldade de falar em público, dificuldade de cobrar por seus serviços, dificuldade de aprendizado, alergias, compulsões, vícios(roer unhas, cigarro, drogas, chocolate), traumas por morte, separação e traumas em geral, fobias, sindrome do pânico, ansiedade, insônia, depressão, dores, doenças entre outros. “¨Nas profundezas do seu subconsciente, à espera de se expandir e de se expressar, há uma sabedoria infinita, há um poder infinito, há um estoque ilimitado de tudo o que é necessário para uma vida perfeita. Comece agora a descobrir essas potencialidades das profundezas da sua mente e elas tomarão forma no mundo exterior”",
+      tooltip: "PSYCH-K é um método simples e direto para identificar e mudar crenças subconscientes auto limitantes, que perpetuam os velhos hábitos de pensamento e comportamento que você gostaria de mudar. Uma poderosa metodologia para atingir as metas e mudanças que não são passíveis apenas com a força de vontade. Estudos em neurociência indicam que 95% de nossa consciência é, na verdade, subconsciente. É a mente subconsciente que guarda nossas atitudes, valores e crenças. É um processo simples que ajuda você a se comunicar com seu subconsciente, onde quase todos os comportamentos humanos – construtivos e destrutivos – se originam, para que você possa mudar as crenças que limitam a sua autoestima, seus relacionamentos, o desempenho no trabalho e até mesmo sua saúde física! EM QUE CASOS O PSYCH-K PODE AJUDAR? Em casos de desequilibrios como: auto-estima baixa, dificuldades de prosperar, dificuldades para se relacionar socialmente e amorosamente, sentimento de inferioridade, dificuldade de dirigir, dificuldade de se aceitar, sentimento de culpa, pessimismo, compulsões alimentares, tiques nervosos, timidez, dificuldade de falar em público, dificuldade de cobrar por seus serviços, dificuldade de aprendizado, alergias, compulsões, vícios(roer unhas, cigarro, drogas, chocolate), traumas por morte, separação e traumas em geral, fobias, sindrome do pânico, ansiedade, insônia, depressão, dores, doenças entre outros. Nas profundezas do seu subconsciente, à espera de se expandir e de se expressar, há uma sabedoria infinita, há um poder infinito, há um estoque ilimitado de tudo o que é necessário para uma vida perfeita. Comece agora a descobrir essas potencialidades das profundezas da sua mente e elas tomarão forma no mundo exterior",
       delay: "0.8s"
     },
     {
@@ -49,6 +53,16 @@ export const ServicePresentation = () => {
       delay: "1s"
     }
   ];
+
+  const handleCardClick = (index: number) => {
+    setActiveTherapy(index);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setActiveTherapy(null);
+  };
 
   return (
     <TooltipProvider>
@@ -90,6 +104,7 @@ export const ServicePresentation = () => {
                           animationDelay: therapy.delay,
                           animationDuration: `${3 + index * 0.5}s`
                         }}
+                        onClick={() => handleCardClick(index)}
                       >
                         <CardContent className="p-6 text-center relative overflow-hidden">
                           {/* Animated background gradient */}
@@ -151,6 +166,39 @@ export const ServicePresentation = () => {
             </div>
         </div>
       </div>
+
+      {/* Modal para Mobile */}
+      {isModalOpen && activeTherapy !== null && (
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl max-w-md w-full max-h-[80vh] overflow-y-auto p-6 relative">
+            <button
+              onClick={closeModal}
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+              aria-label="Fechar"
+            >
+              <X className="h-6 w-6" />
+            </button>
+            
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3 mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-cor-principal to-cor-botao-hover rounded-full flex items-center justify-center">
+                  {(() => {
+                    const IconComponent = therapies[activeTherapy].icon;
+                    return <IconComponent className="h-6 w-6 text-white" />;
+                  })()}
+                </div>
+                <h3 className="text-xl font-semibold text-cor-principal">
+                  {therapies[activeTherapy].title}
+                </h3>
+              </div>
+              
+              <p className="text-sm text-cor-texto/80 leading-relaxed">
+                {therapies[activeTherapy].tooltip}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
     </TooltipProvider>
   );
